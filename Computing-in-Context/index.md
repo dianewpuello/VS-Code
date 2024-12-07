@@ -7,6 +7,4 @@ This is the homepage for my Python Projects. Here, you'll find:
 
 (section-label)=
 ## About This Project
-This book is designed to present my work in python.
-
-Here is a [reference to the intro](intro.md). Here is a reference to [](section-label).
+This is designed to present my work in python.
