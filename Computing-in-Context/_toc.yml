@@ -1,0 +1,7 @@
+format: jb-book
+root: index
+chapters:
+    - file: Project_1/Project_1_Death_Rate_dw3149
+    - file: Project_2/Project_2_dw3149
+    - file: Project_3_folder/project_3
+    
