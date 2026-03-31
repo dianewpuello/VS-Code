@@ -1,0 +1,2360 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Project 1: Leading Causes of Death in New York City &#8212; Diane's Jupyter Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Project_1_Death_Rate_dw3149';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Project 2: Cancer Rates vs. Pharmaceutical Sales Across Countries" href="Project_2_dw3149.html" />
+    <link rel="prev" title="Welcome to Diane’s JupyterBook" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+<script>
+require.config({
+  paths: {
+    'plotly': 'https://cdn.plot.ly/plotly-latest.min'
+  }
+});
+</script>
+</head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Diane's Jupyter Book</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Welcome to Diane’s JupyterBook
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Project 1: Leading Causes of Death in New York City</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Project_2_dw3149.html">Project 2: Cancer Rates vs. Pharmaceutical Sales Across Countries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project_3.html">Project 3: Gender-Based Violence and Victim Age in NYC</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Project_1_Death_Rate_dw3149.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Project 1: Leading Causes of Death in New York City</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="project-1-leading-causes-of-death-in-new-york-city">
+<h1>Project 1: Leading Causes of Death in New York City<a class="headerlink" href="#project-1-leading-causes-of-death-in-new-york-city" title="Permalink to this heading">#</a></h1>
+<p>This project explores the leading causes of death in New York City using publicly available data from NYC OpenData. The dataset includes year, leading cause, sex, race/ethnicity, number of deaths, and death rates. Through data cleaning and statistical analysis, the project identifies which causes of death carry the highest rates across demographic groups. A custom sparkline visualization illustrates the relative severity of each leading cause. The analysis reveals that heart disease consistently ranks as the leading cause of death across most demographics in New York City.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Project 1: Leading Causes of Death in New York City</span>
+<span class="kn">import</span> <span class="nn">plotly.io</span> <span class="k">as</span> <span class="nn">pio</span>
+
+<span class="n">pio</span><span class="o">.</span><span class="n">renderers</span><span class="o">.</span><span class="n">default</span> <span class="o">=</span> <span class="s2">&quot;vscode+jupyterlab+notebook_connected&quot;</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">Cause_of_death</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://data.cityofnewyork.us/api/views/jb7j-dtam/rows.csv?accessType=DOWNLOAD&quot;</span><span class="p">)</span>
+<span class="n">Cause_of_death</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>Leading Cause</th>
+      <th>Sex</th>
+      <th>Race Ethnicity</th>
+      <th>Deaths</th>
+      <th>Death Rate</th>
+      <th>Age Adjusted Death Rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2010</td>
+      <td>Chronic Lower Respiratory Diseases (J40-J47)</td>
+      <td>F</td>
+      <td>Not Stated/Unknown</td>
+      <td>6</td>
+      <td>.</td>
+      <td>.</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2009</td>
+      <td>Nephritis, Nephrotic Syndrome and Nephrisis (N...</td>
+      <td>F</td>
+      <td>Other Race/ Ethnicity</td>
+      <td>.</td>
+      <td>.</td>
+      <td>.</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2011</td>
+      <td>Chronic Lower Respiratory Diseases (J40-J47)</td>
+      <td>M</td>
+      <td>White Non-Hispanic</td>
+      <td>444</td>
+      <td>33.3</td>
+      <td>27.8</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2010</td>
+      <td>Diabetes Mellitus (E10-E14)</td>
+      <td>M</td>
+      <td>White Non-Hispanic</td>
+      <td>245</td>
+      <td>18.3</td>
+      <td>15.6</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2012</td>
+      <td>Intentional Self-Harm (Suicide: X60-X84, Y87.0)</td>
+      <td>M</td>
+      <td>White Non-Hispanic</td>
+      <td>199</td>
+      <td>14.9</td>
+      <td>13.6</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2097</th>
+      <td>2021</td>
+      <td>Essential Hypertension and Renal Diseases (I10...</td>
+      <td>Female</td>
+      <td>Not Stated/Unknown</td>
+      <td>10</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2098</th>
+      <td>2021</td>
+      <td>Human Immunodeficiency Viruses Diseases</td>
+      <td>Female</td>
+      <td>Not Stated/Unknown</td>
+      <td>7</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2099</th>
+      <td>2021</td>
+      <td>Diabetes Mellitus (E10-E14)</td>
+      <td>Female</td>
+      <td>Not Stated/Unknown</td>
+      <td>7</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2100</th>
+      <td>2021</td>
+      <td>Alzheimer's Disease (G30)</td>
+      <td>Female</td>
+      <td>Not Stated/Unknown</td>
+      <td>7</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2101</th>
+      <td>2021</td>
+      <td>All Other Causes</td>
+      <td>Female</td>
+      <td>Not Stated/Unknown</td>
+      <td>102</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>2102 rows × 7 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Cause_of_death</span><span class="p">[</span><span class="s2">&quot;Death Rate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">Cause_of_death</span><span class="p">[</span><span class="s2">&quot;Death Rate&quot;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>I used this above code to filter out the nonnumerical values in the category “Death Rate” because the special characters were affecting mean, median, and mode. I used “coerce” to change the nonnumerical values to NaN</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Cause_of_death</span> <span class="o">=</span> <span class="n">Cause_of_death</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Death Rate&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>.dropna was a function that I looked up on Pandas Python Library to take out all the NaN values: <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.dropna.html#pandas.DataFrame.dropna">https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.dropna.html#pandas.DataFrame.dropna</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Cause_of_death</span><span class="p">[</span><span class="s2">&quot;Death Rate&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2        33.3
+3        18.3
+4        14.9
+5         3.6
+8         4.2
+        ...  
+2073     22.9
+2074     22.0
+2075     18.6
+2076     17.5
+2077    199.1
+Name: Death Rate, Length: 1373, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Checked the data to see if the special characters and NaN went away^</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Cause_of_death</span><span class="p">[</span><span class="s2">&quot;Death Rate&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    1373.000000
+mean       56.258163
+std        75.598398
+min         2.400000
+25%        12.843000
+50%        20.100000
+75%        78.900000
+max       491.400000
+Name: Death Rate, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>We learned .describe() in class as an easy way to get the Five Number Summary. The next three are how I would find the mean, median, and mode without using .describe()</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mean</span> <span class="o">=</span> <span class="n">Cause_of_death</span><span class="p">[</span><span class="s2">&quot;Death Rate&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">mean</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>56.258162509700654
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mode</span> <span class="o">=</span> <span class="n">Cause_of_death</span><span class="p">[</span><span class="s2">&quot;Death Rate&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<p>Looks like there is more than one mode in this data set.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">median</span> <span class="o">=</span> <span class="n">Cause_of_death</span><span class="p">[</span><span class="s2">&quot;Death Rate&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="n">median</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20.1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Cause_of_death_stats</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">Cause_of_death_stats</span><span class="p">[</span><span class="s1">&#39;Mean&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Cause_of_death</span><span class="p">[</span><span class="s2">&quot;Death Rate&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">Cause_of_death_stats</span><span class="p">[</span><span class="s1">&#39;Median&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Cause_of_death</span><span class="p">[</span><span class="s2">&quot;Death Rate&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="n">Cause_of_death_stats</span><span class="p">[</span><span class="s1">&#39;Mode&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Cause_of_death</span><span class="p">[</span><span class="s2">&quot;Death Rate&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
+
+<span class="n">Cause_of_death_stats</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Mean&#39;: 56.258162509700654,
+ &#39;Median&#39;: 20.1,
+ &#39;Mode&#39;: 0    13.0
+ 1    16.3
+ 2    17.3
+ Name: Death Rate, dtype: float64}
+</pre></div>
+</div>
+</div>
+</div>
+<p>The above is a dictionary where I stored the values for Mean, Median, and Mode</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Cause_of_death_stats</span><span class="p">[</span><span class="s1">&#39;Mean&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>56.258162509700654
+</pre></div>
+</div>
+</div>
+</div>
+<p>Plugged in a value from the dictionary to see if my dictionary worked and it does!</p>
+<p>The next three kernels are what I understood on the homework to be “the hard way” to do these calculations.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">Cause_of_death</span><span class="p">[</span><span class="s2">&quot;Death Rate&quot;</span><span class="p">]</span> <span class="c1">#I set the data frame column to the variable &quot;data&quot; because it is much easier for me to type repeatedly </span>
+<span class="c1"># Calculate mean</span>
+<span class="n">mean</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="c1">#we learned this code in the first part of the class. I am summing up all the numbers and then dividing it by the number of digits.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mean:&quot;</span><span class="p">,</span> <span class="n">mean</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean: 56.258162509700654
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">Cause_of_death</span><span class="p">[</span><span class="s2">&quot;Death Rate&quot;</span><span class="p">]</span>
+<span class="c1"># Calculate median</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#see markdown below</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="c1">#if the number of digits in the list is even, this code will tell the program what to do next</span>
+    <span class="n">median</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">data</span><span class="p">[</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span> <span class="c1">#We divide the sum of middle two numbers in an even length list</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">median</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">]</span> <span class="c1">#if the list has an odd number of digits then we should divide the total number of digits in the list by two to find the placement of our median in the list. Then the code pops out what the median number is. </span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Median:&quot;</span><span class="p">,</span> <span class="n">median</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Median: 20.1
+</pre></div>
+</div>
+</div>
+</div>
+<p>For the above: I had to sort all the data because you need it going from the smallest to largest number to calculate the median. Here is where I Learned that.sort() does not work for pandas which is the package that I am working in for this assignement. After I did this, my code still didn’t work. From the class notes, I figured out my code did not work when I manipulated the numbers in the series and didn’t reset the index to the new order of the numbers in the series. I reset the index so that the new list of numbers returns a new series that the following code can use to calculate the median. Still didn’t work… so I looked up .reset_index() on pandas API reference and saw that drop=false by default. I changed drop=True to tell the method not to keep the old index as a separate column. Here is my pandas API reference: <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.reset_index.html#pandas.DataFrame.reset_index">https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.reset_index.html#pandas.DataFrame.reset_index</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_mode</span> <span class="o">=</span> <span class="n">Cause_of_death</span><span class="p">[</span><span class="s2">&quot;Death Rate&quot;</span><span class="p">]</span> <span class="c1">#changed the name because I didn&#39;t want what I did in the previous kernal to affect this one</span>
+
+<span class="c1"># Count the frequency of each number</span>
+<span class="n">frequency</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">data_mode</span><span class="p">:</span>
+    <span class="n">frequency</span><span class="p">[</span><span class="n">num</span><span class="p">]</span> <span class="o">=</span> <span class="n">frequency</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span> <span class="c1">#This code is like what we learned in the first half of the class with the +1 in a for loop to count frequency of an index. If the num exists, get(num,0) returns its current count and if it&#39;s not found then it returns zero.  </span>
+
+<span class="c1"># Find the mode</span>
+<span class="n">max_count</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">frequency</span><span class="o">.</span><span class="n">values</span><span class="p">())</span> <span class="c1">#we want to most frequently occuring number</span>
+<span class="n">modes</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">frequency</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">y</span> <span class="o">==</span> <span class="n">max_count</span><span class="p">]</span> <span class="c1">#this is list comprehension //check the markup below to see how I got this line//</span>
+
+<span class="c1"># If there are multiple modes, it will display all of them</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mode(s):&quot;</span><span class="p">,</span> <span class="n">modes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mode(s): [17.3, 16.3, 13.0]
+</pre></div>
+</div>
+</div>
+</div>
+<p>The reference for the above .get method I used: <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict.get">https://docs.python.org/3/library/stdtypes.html#dict.get</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Cause_of_death</span><span class="o">.</span><span class="n">head</span><span class="p">()</span> <span class="c1">#I am playing around here to see how different methods look with this data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>Leading Cause</th>
+      <th>Sex</th>
+      <th>Race Ethnicity</th>
+      <th>Deaths</th>
+      <th>Death Rate</th>
+      <th>Age Adjusted Death Rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2</th>
+      <td>2011</td>
+      <td>Chronic Lower Respiratory Diseases (J40-J47)</td>
+      <td>M</td>
+      <td>White Non-Hispanic</td>
+      <td>444</td>
+      <td>33.3</td>
+      <td>27.8</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2010</td>
+      <td>Diabetes Mellitus (E10-E14)</td>
+      <td>M</td>
+      <td>White Non-Hispanic</td>
+      <td>245</td>
+      <td>18.3</td>
+      <td>15.6</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2012</td>
+      <td>Intentional Self-Harm (Suicide: X60-X84, Y87.0)</td>
+      <td>M</td>
+      <td>White Non-Hispanic</td>
+      <td>199</td>
+      <td>14.9</td>
+      <td>13.6</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2011</td>
+      <td>Certain Conditions originating in the Perinata...</td>
+      <td>M</td>
+      <td>Asian and Pacific Islander</td>
+      <td>19</td>
+      <td>3.6</td>
+      <td>4.2</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>2011</td>
+      <td>Alzheimer's Disease (G30)</td>
+      <td>F</td>
+      <td>Asian and Pacific Islander</td>
+      <td>24</td>
+      <td>4.2</td>
+      <td>5.4</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">leading_cause_death_rate</span> <span class="o">=</span> <span class="n">Cause_of_death</span><span class="p">[[</span><span class="s2">&quot;Leading Cause&quot;</span><span class="p">,</span> <span class="s2">&quot;Death Rate&quot;</span><span class="p">]]</span>  <span class="c1">#I created the two column data frame below to use in my data visualization</span>
+<span class="n">leading_cause_death_rate</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Leading Cause</th>
+      <th>Death Rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2</th>
+      <td>Chronic Lower Respiratory Diseases (J40-J47)</td>
+      <td>33.3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Diabetes Mellitus (E10-E14)</td>
+      <td>18.3</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Intentional Self-Harm (Suicide: X60-X84, Y87.0)</td>
+      <td>14.9</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Certain Conditions originating in the Perinata...</td>
+      <td>3.6</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Alzheimer's Disease (G30)</td>
+      <td>4.2</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2073</th>
+      <td>Mental and Behavioral Disorders due to Acciden...</td>
+      <td>22.9</td>
+    </tr>
+    <tr>
+      <th>2074</th>
+      <td>Influenza (Flu) and Pneumonia (J09-J18)</td>
+      <td>22.0</td>
+    </tr>
+    <tr>
+      <th>2075</th>
+      <td>Chronic Lower Respiratory Diseases (J40-J47)</td>
+      <td>18.6</td>
+    </tr>
+    <tr>
+      <th>2076</th>
+      <td>Alzheimer's Disease (G30)</td>
+      <td>17.5</td>
+    </tr>
+    <tr>
+      <th>2077</th>
+      <td>All Other Causes</td>
+      <td>199.1</td>
+    </tr>
+  </tbody>
+</table>
+<p>1373 rows × 2 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Function to create a sparkline using asterisks</span>
+<span class="k">def</span> <span class="nf">create_sparkline</span><span class="p">(</span><span class="n">leading_cause_death_rate</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span> <span class="c1">#I set the max number of astericks to 10</span>
+    <span class="n">max_value</span> <span class="o">=</span> <span class="n">leading_cause_death_rate</span><span class="p">[</span><span class="s2">&quot;Death Rate&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="c1">#Found the max like I found mean, median, and mode above</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">leading_cause_death_rate</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span> <span class="c1">#https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.iterrows.html</span>
+        <span class="n">leading_cause</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;Leading Cause&#39;</span><span class="p">]</span> <span class="c1">#I was trying to do this exact code without setting &#39;Leading Cause&#39; to a variable called leading_cause and the syntax kept coming back as incorrect. I looked up iterrows on Pandas API reference and figured out that I needed to set the rows to a variable called leading_cause</span>
+        <span class="n">death_rate</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;Death Rate&#39;</span><span class="p">]</span> <span class="c1">#I set up the variables and had the program read the data frame row per row using iterrows because I want the leading cause to match its death rate when it&#39;s being read by the program.</span>
+
+        <span class="c1"># Normalize the count to a number of asterisks</span>
+        <span class="n">num_stars</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">death_rate</span> <span class="o">/</span> <span class="n">max_value</span><span class="p">)</span> <span class="o">*</span> <span class="n">max_length</span><span class="p">)</span> <span class="c1">#I used int here because in Office Hours, I learned that inputs come back as strings</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">leading_cause</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="s1">&#39;*&#39;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">num_stars</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1">#.append we learned in the first half of the classand multiplied the asterisk &#39;*&#39; character by the num_stars variable that I created in the last line.</span>
+    
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="c1"># Generate and display the sparkline</span>
+<span class="n">sparkline</span> <span class="o">=</span> <span class="n">create_sparkline</span><span class="p">(</span><span class="n">leading_cause_death_rate</span><span class="p">)</span> <span class="c1">#The create_sparkline function is called with leading_cause_death_rate as an argument, generating a list of sparkline strings.</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">sparkline</span><span class="p">:</span> <span class="c1">#Each line in the returned sparkline list is printed, displaying the name of the leading cause followed by a visualization of asterisks proportional to its death rate.</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Chronic Lower Respiratory Diseases (J40-J47): 
+Diabetes Mellitus (E10-E14): 
+Intentional Self-Harm (Suicide: X60-X84, Y87.0): 
+Certain Conditions originating in the Perinatal Period (P00-P96): 
+Alzheimer&#39;s Disease (G30): 
+Assault (Homicide: Y87.1, X85-Y09): 
+Malignant Neoplasms (Cancer: C00-C97): ****
+Essential Hypertension and Renal Diseases (I10, I12): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Diabetes Mellitus (E10-E14): 
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+Alzheimer&#39;s Disease (G30): 
+Diabetes Mellitus (E10-E14): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+All Other Causes: **
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+All Other Causes: 
+Malignant Neoplasms (Cancer: C00-C97): ***
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ****
+Essential Hypertension and Renal Diseases (I10, I12): 
+Diabetes Mellitus (E10-E14): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+All Other Causes: *
+Influenza (Flu) and Pneumonia (J09-J18): 
+Diabetes Mellitus (E10-E14): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ******
+Influenza (Flu) and Pneumonia (J09-J18): 
+Alzheimer&#39;s Disease (G30): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Diabetes Mellitus (E10-E14): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Chronic Liver Disease and Cirrhosis (K70, K73): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *
+Diabetes Mellitus (E10-E14): 
+Chronic Liver Disease and Cirrhosis (K70, K73): 
+Diabetes Mellitus (E10-E14): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ******
+Malignant Neoplasms (Cancer: C00-C97): **
+Influenza (Flu) and Pneumonia (J09-J18): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Diabetes Mellitus (E10-E14): 
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+All Other Causes: **
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *
+Assault (Homicide: Y87.1, X85-Y09): 
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+Diabetes Mellitus (E10-E14): 
+Malignant Neoplasms (Cancer: C00-C97): **
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *
+All Other Causes: **
+Malignant Neoplasms (Cancer: C00-C97): ***
+Cerebrovascular Disease (Stroke: I60-I69): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Diabetes Mellitus (E10-E14): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Nephritis, Nephrotic Syndrome and Nephrisis (N00-N07, N17-N19, N25-N27): 
+Chronic Liver Disease and Cirrhosis (K70, K73): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ****
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Malignant Neoplasms (Cancer: C00-C97): *
+Cerebrovascular Disease (Stroke: I60-I69): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *
+All Other Causes: 
+Chronic Liver Disease and Cirrhosis (K70, K73): 
+Diabetes Mellitus (E10-E14): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *******
+Chronic Lower Respiratory Diseases (J40-J47): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Intentional Self-Harm (Suicide: X60-X84, Y87.0): 
+Diabetes Mellitus (E10-E14): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ****
+Diabetes Mellitus (E10-E14): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Diabetes Mellitus (E10-E14): 
+All Other Causes: **
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Diabetes Mellitus (E10-E14): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+All Other Causes: ***
+Influenza (Flu) and Pneumonia (J09-J18): 
+Septicemia (A40-A41): 
+All Other Causes: **
+All Other Causes: *
+Intentional Self-Harm (Suicide: X60-X84, Y87.0): 
+Septicemia (A40-A41): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Malignant Neoplasms (Cancer: C00-C97): *
+Cerebrovascular Disease (Stroke: I60-I69): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Alzheimer&#39;s Disease (G30): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ********
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *****
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Diabetes Mellitus (E10-E14): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+All Other Causes: **
+Intentional Self-Harm (Suicide: X60-X84, Y87.0): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *
+Nephritis, Nephrotic Syndrome and Nephrisis (N00-N07, N17-N19, N25-N27): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Nephritis, Nephrotic Syndrome and Nephrisis (N00-N07, N17-N19, N25-N27): 
+All Other Causes: *
+Essential Hypertension and Renal Diseases (I10, I12): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ****
+Chronic Lower Respiratory Diseases (J40-J47): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+All Other Causes: ***
+Intentional Self-Harm (Suicide: X60-X84, Y87.0): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Diabetes Mellitus (E10-E14): 
+Malignant Neoplasms (Cancer: C00-C97): ****
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ****
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Malignant Neoplasms (Cancer: C00-C97): *****
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ******
+Essential Hypertension and Renal Diseases (I10, I12): 
+Malignant Neoplasms (Cancer: C00-C97): ****
+Diabetes Mellitus (E10-E14): 
+All Other Causes: ***
+Influenza (Flu) and Pneumonia (J09-J18): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Alzheimer&#39;s Disease (G30): 
+Diabetes Mellitus (E10-E14): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Diabetes Mellitus (E10-E14): 
+Diabetes Mellitus (E10-E14): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ****
+Congenital Malformations, Deformations, and Chromosomal Abnormalities (Q00-Q99): 
+Nephritis, Nephrotic Syndrome and Nephrisis (N00-N07, N17-N19, N25-N27): 
+Malignant Neoplasms (Cancer: C00-C97): *
+Malignant Neoplasms (Cancer: C00-C97): *
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+All Other Causes: ***
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Viral Hepatitis (B15-B19): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Alzheimer&#39;s Disease (G30): 
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Alzheimer&#39;s Disease (G30): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Malignant Neoplasms (Cancer: C00-C97): **
+Malignant Neoplasms (Cancer: C00-C97): ***
+All Other Causes: 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *
+Essential Hypertension and Renal Diseases (I10, I12): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Diabetes Mellitus (E10-E14): 
+Nephritis, Nephrotic Syndrome and Nephrisis (N00-N07, N17-N19, N25-N27): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Alzheimer&#39;s Disease (G30): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Alzheimer&#39;s Disease (G30): 
+Diabetes Mellitus (E10-E14): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Alzheimer&#39;s Disease (G30): 
+All Other Causes: *
+Cerebrovascular Disease (Stroke: I60-I69): 
+All Other Causes: *
+Chronic Lower Respiratory Diseases (J40-J47): 
+Malignant Neoplasms (Cancer: C00-C97): *
+Influenza (Flu) and Pneumonia (J09-J18): 
+Certain Conditions originating in the Perinatal Period (P00-P96): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Intentional Self-Harm (Suicide: X60-X84, Y87.0): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Diabetes Mellitus (E10-E14): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+All Other Causes: *
+Influenza (Flu) and Pneumonia (J09-J18): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *
+Nephritis, Nephrotic Syndrome and Nephrisis (N00-N07, N17-N19, N25-N27): 
+Alzheimer&#39;s Disease (G30): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Essential Hypertension and Renal Diseases (I10, I12): 
+Diabetes Mellitus (E10-E14): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+All Other Causes: ***
+Influenza (Flu) and Pneumonia (J09-J18): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Diabetes Mellitus (E10-E14): 
+All Other Causes: **
+All Other Causes: *
+Intentional Self-Harm (Suicide: X60-X84, Y87.0): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Chronic Liver Disease and Cirrhosis (K70, K73): 
+Malignant Neoplasms (Cancer: C00-C97): ***
+Diabetes Mellitus (E10-E14): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *******
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ****
+Cerebrovascular Disease (Stroke: I60-I69): 
+Diabetes Mellitus (E10-E14): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ****
+Chronic Liver Disease and Cirrhosis (K70, K73): 
+All Other Causes: **
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Malignant Neoplasms (Cancer: C00-C97): *
+All Other Causes: *
+All Other Causes: ***
+Chronic Liver Disease and Cirrhosis (K70, K73): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Nephritis, Nephrotic Syndrome and Nephrisis (N00-N07, N17-N19, N25-N27): 
+Malignant Neoplasms (Cancer: C00-C97): *
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+All Other Causes: **
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Malignant Neoplasms (Cancer: C00-C97): *****
+Malignant Neoplasms (Cancer: C00-C97): *
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Malignant Neoplasms (Cancer: C00-C97): ***
+All Other Causes: **
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ****
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ****
+Chronic Lower Respiratory Diseases (J40-J47): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Intentional Self-Harm (Suicide: X60-X84, Y87.0): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Septicemia (A40-A41): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Malignant Neoplasms (Cancer: C00-C97): *
+Essential Hypertension and Renal Diseases (I10, I12): 
+Malignant Neoplasms (Cancer: C00-C97): *
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+Assault (Homicide: Y87.1, X85-Y09): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+All Other Causes: **
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Intentional Self-Harm (Suicide: X60-X84, Y87.0): 
+Diabetes Mellitus (E10-E14): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Diabetes Mellitus (E10-E14): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Septicemia (A40-A41): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Chronic Liver Disease and Cirrhosis (K70, K73): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Intentional Self-Harm (Suicide: X60-X84, Y87.0): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Intentional Self-Harm (Suicide: X60-X84, Y87.0): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Diabetes Mellitus (E10-E14): 
+Malignant Neoplasms (Cancer: C00-C97): *****
+Diabetes Mellitus (E10-E14): 
+Diabetes Mellitus (E10-E14): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ******
+Cerebrovascular Disease (Stroke: I60-I69): 
+Alzheimer&#39;s Disease (G30): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Essential Hypertension and Renal Diseases (I10, I12): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ******
+Cerebrovascular Disease (Stroke: I60-I69): 
+Malignant Neoplasms (Cancer: C00-C97): ***
+Chronic Lower Respiratory Diseases (J40-J47): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+All Other Causes: *
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+All Other Causes: *
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ******
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Intentional Self-Harm (Suicide: X60-X84, Y87.0): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ********
+Chronic Liver Disease and Cirrhosis (K70, K73): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Chronic Liver Disease and Cirrhosis (K70, K73): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Malignant Neoplasms (Cancer: C00-C97): ***
+Influenza (Flu) and Pneumonia (J09-J18): 
+All Other Causes: ***
+Chronic Lower Respiratory Diseases (J40-J47): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+All Other Causes: **
+Malignant Neoplasms (Cancer: C00-C97): *
+Diabetes Mellitus (E10-E14): 
+All Other Causes: ***
+Chronic Lower Respiratory Diseases (J40-J47): 
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+Intentional Self-Harm (Suicide: X60-X84, Y87.0): 
+Alzheimer&#39;s Disease (G30): 
+All Other Causes: **
+All Other Causes: ***
+Malignant Neoplasms (Cancer: C00-C97): ***
+Essential Hypertension and Renal Diseases (I10, I12): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ******
+Cerebrovascular Disease (Stroke: I60-I69): 
+Malignant Neoplasms (Cancer: C00-C97): **
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Diabetes Mellitus (E10-E14): 
+Intentional Self-Harm (Suicide: X60-X84, Y87.0): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Malignant Neoplasms (Cancer: C00-C97): ***
+Assault (Homicide: Y87.1, X85-Y09): 
+Malignant Neoplasms (Cancer: C00-C97): ****
+Cerebrovascular Disease (Stroke: I60-I69): 
+Diabetes Mellitus (E10-E14): 
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+Malignant Neoplasms (Cancer: C00-C97): **
+Diabetes Mellitus (E10-E14): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Influenza (Flu) and Pneumonia (J09-J18): 
+Diabetes Mellitus (E10-E14): 
+Malignant Neoplasms (Cancer: C00-C97): **
+Essential Hypertension and Renal Diseases (I10, I12): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+All Other Causes: **
+Cerebrovascular Disease (Stroke: I60-I69): 
+Malignant Neoplasms (Cancer: C00-C97): ***
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Malignant Neoplasms (Cancer: C00-C97): ****
+Cerebrovascular Disease (Stroke: I60-I69): 
+All Other Causes: *
+Chronic Lower Respiratory Diseases (J40-J47): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Influenza (Flu) and Pneumonia (J09-J18): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ******
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Assault (Homicide: Y87.1, X85-Y09): 
+Malignant Neoplasms (Cancer: C00-C97): *
+Cerebrovascular Disease (Stroke: I60-I69): 
+Malignant Neoplasms (Cancer: C00-C97): *
+Essential Hypertension and Renal Diseases (I10, I12): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *
+Chronic Lower Respiratory Diseases (J40-J47): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **********
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Septicemia (A40-A41): 
+All Other Causes: **
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+All Other Causes: *
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Alzheimer&#39;s Disease (G30): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+All Other Causes: 
+Nephritis, Nephrotic Syndrome and Nephrisis (N00-N07, N17-N19, N25-N27): 
+Diabetes Mellitus (E10-E14): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Chronic Liver Disease and Cirrhosis (K70, K73): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Malignant Neoplasms (Cancer: C00-C97): ***
+All Other Causes: ***
+Chronic Lower Respiratory Diseases (J40-J47): 
+Diabetes Mellitus (E10-E14): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Diabetes Mellitus (E10-E14): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Malignant Neoplasms (Cancer: C00-C97): *
+Chronic Lower Respiratory Diseases (J40-J47): 
+All Other Causes: *
+Malignant Neoplasms (Cancer: C00-C97): *
+Malignant Neoplasms (Cancer: C00-C97): *
+Malignant Neoplasms (Cancer: C00-C97): ***
+Chronic Lower Respiratory Diseases (J40-J47): 
+Assault (Homicide: Y87.1, X85-Y09): 
+All Other Causes: *
+Malignant Neoplasms (Cancer: C00-C97): ***
+Diabetes Mellitus (E10-E14): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+All Other Causes: ***
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Malignant Neoplasms (Cancer: C00-C97): *
+Chronic Lower Respiratory Diseases (J40-J47): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ****
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Diabetes Mellitus (E10-E14): 
+Malignant Neoplasms (Cancer: C00-C97): ***
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Essential Hypertension and Renal Diseases (I10, I12): 
+Malignant Neoplasms (Cancer: C00-C97): **
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Cerebrovascular Disease (Stroke: I60-I69): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ****
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Intentional Self-Harm (Suicide: X60-X84, Y87.0): 
+Diabetes Mellitus (E10-E14): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Intentional Self-Harm (Suicide: X60-X84, Y87.0): 
+Alzheimer&#39;s Disease (G30): 
+All Other Causes: ***
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+Malignant Neoplasms (Cancer: C00-C97): ****
+Influenza (Flu) and Pneumonia (J09-J18): 
+Malignant Neoplasms (Cancer: C00-C97): ***
+Influenza (Flu) and Pneumonia (J09-J18): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Diabetes Mellitus (E10-E14): 
+Chronic Liver Disease and Cirrhosis (K70, K73): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Intentional Self-Harm (Suicide: X60-X84, Y87.0): 
+Malignant Neoplasms (Cancer: C00-C97): *
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *****
+Diabetes Mellitus (E10-E14): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Malignant Neoplasms (Cancer: C00-C97): ****
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *
+Influenza (Flu) and Pneumonia (J09-J18): 
+Diabetes Mellitus (E10-E14): 
+Malignant Neoplasms (Cancer: C00-C97): *
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+All Other Causes: **
+Influenza (Flu) and Pneumonia (J09-J18): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Diabetes Mellitus (E10-E14): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Malignant Neoplasms (Cancer: C00-C97): *
+Nephritis, Nephrotic Syndrome and Nephrisis (N00-N07, N17-N19, N25-N27): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Intentional Self-Harm (Suicide: X60-X84, Y87.0): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ********
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Alzheimer&#39;s Disease (G30): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *********
+Chronic Lower Respiratory Diseases (J40-J47): 
+Diabetes Mellitus (E10-E14): 
+All Other Causes: *
+Essential Hypertension and Renal Diseases (I10, I12): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+Chronic Liver Disease and Cirrhosis (K70, K73): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Alzheimer&#39;s Disease (G30): 
+Malignant Neoplasms (Cancer: C00-C97): **
+Chronic Lower Respiratory Diseases (J40-J47): 
+Malignant Neoplasms (Cancer: C00-C97): ****
+Diabetes Mellitus (E10-E14): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+All Other Causes: ***
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+All Other Causes: 
+Malignant Neoplasms (Cancer: C00-C97): **
+Cerebrovascular Disease (Stroke: I60-I69): 
+Chronic Liver Disease and Cirrhosis (K70, K73): 
+All Other Causes: *
+Chronic Lower Respiratory Diseases (J40-J47): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Influenza (Flu) and Pneumonia (J09-J18): *
+Cerebrovascular Disease (Stroke: I60-I69): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Alzheimer&#39;s Disease (G30): 
+Nephritis, Nephrotic Syndrome and Nephrisis (N00-N07, N17-N19, N25-N27): 
+All Other Causes: 
+All Other Causes: **
+Nephritis, Nephrotic Syndrome and Nephrisis (N00-N07, N17-N19, N25-N27): 
+Diabetes Mellitus (E10-E14): 
+Chronic Liver Disease and Cirrhosis (K70, K73): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Diabetes Mellitus (E10-E14): 
+Nephritis, Nephrotic Syndrome and Nephrisis (N00-N07, N17-N19, N25-N27): 
+Malignant Neoplasms (Cancer: C00-C97): ****
+Diabetes Mellitus (E10-E14): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Alzheimer&#39;s Disease (G30): 
+Alzheimer&#39;s Disease (G30): 
+All Other Causes: 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Diabetes Mellitus (E10-E14): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Intentional Self-Harm (Suicide: X60-X84, Y87.0): 
+Malignant Neoplasms (Cancer: C00-C97): *
+Chronic Lower Respiratory Diseases (J40-J47): 
+Malignant Neoplasms (Cancer: C00-C97): *
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *****
+Cerebrovascular Disease (Stroke: I60-I69): 
+Malignant Neoplasms (Cancer: C00-C97): ****
+Diabetes Mellitus (E10-E14): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+All Other Causes: **
+Influenza (Flu) and Pneumonia (J09-J18): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+All Other Causes: *
+Chronic Lower Respiratory Diseases (J40-J47): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Chronic Liver Disease and Cirrhosis (K70, K73): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Malignant Neoplasms (Cancer: C00-C97): ****
+Intentional Self-Harm (Suicide: X60-X84, Y87.0): 
+Intentional Self-Harm (Suicide: X60-X84, Y87.0): 
+Malignant Neoplasms (Cancer: C00-C97): ****
+Cerebrovascular Disease (Stroke: I60-I69): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+All Other Causes: ***
+Septicemia (A40-A41): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Malignant Neoplasms (Cancer: C00-C97): ***
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Chronic Liver Disease and Cirrhosis (K70, K73): 
+Diabetes Mellitus (E10-E14): 
+All Other Causes: **
+Chronic Lower Respiratory Diseases (J40-J47): 
+Diabetes Mellitus (E10-E14): 
+Diabetes Mellitus (E10-E14): 
+All Other Causes: **
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Intentional Self-Harm (Suicide: X60-X84, Y87.0): 
+All Other Causes: *
+Diabetes Mellitus (E10-E14): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+All Other Causes: **
+Chronic Lower Respiratory Diseases (J40-J47): 
+Intentional Self-Harm (Suicide: X60-X84, Y87.0): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Septicemia (A40-A41): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Assault (Homicide: Y87.1, X85-Y09): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *
+Chronic Lower Respiratory Diseases (J40-J47): 
+Malignant Neoplasms (Cancer: C00-C97): *
+Cerebrovascular Disease (Stroke: I60-I69): 
+All Other Causes: **
+All Other Causes: 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+All Other Causes: ***
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *******
+Alzheimer&#39;s Disease (G30): 
+All Other Causes: *
+Influenza (Flu) and Pneumonia (J09-J18): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Assault (Homicide: Y87.1, X85-Y09): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *
+Cerebrovascular Disease (Stroke: I60-I69): 
+Diabetes Mellitus (E10-E14): 
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Diabetes Mellitus (E10-E14): 
+Accidents Except Drug Posioning (V01-X39, X43, X45-X59, Y85-Y86): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Malignant Neoplasms (Cancer: C00-C97): ****
+Alzheimer&#39;s Disease (G30): 
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ****
+Cerebrovascular Disease (Stroke: I60-I69): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Assault (Homicide: Y87.1, X85-Y09): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Alzheimer&#39;s Disease (G30): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Diabetes Mellitus (E10-E14): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Diabetes Mellitus (E10-E14): 
+Nephritis, Nephrotic Syndrome and Nephrisis (N00-N07, N17-N19, N25-N27): 
+Malignant Neoplasms (Cancer: C00-C97): *
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *
+Cerebrovascular Disease (Stroke: I60-I69): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Diabetes Mellitus (E10-E14): 
+Alzheimer&#39;s Disease (G30): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Intentional Self-Harm (Suicide: X60-X84, Y87.0): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+All Other Causes: *
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Malignant Neoplasms (Cancer: C00-C97): *
+Influenza (Flu) and Pneumonia (J09-J18): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Diabetes Mellitus (E10-E14): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Alzheimer&#39;s Disease (G30): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+All Other Causes: *
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ****
+Malignant Neoplasms (Cancer: C00-C97): ***
+Diabetes Mellitus (E10-E14): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Alzheimer&#39;s Disease (G30): 
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+Nephritis, Nephrotic Syndrome and Nephrisis (N00-N07, N17-N19, N25-N27): 
+All Other Causes: ***
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ******
+Malignant Neoplasms (Cancer: C00-C97): ****
+Influenza (Flu) and Pneumonia (J09-J18): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Alzheimer&#39;s Disease (G30): 
+Diabetes Mellitus (E10-E14): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Septicemia (A40-A41): 
+All Other Causes: ***
+Malignant Neoplasms (Cancer: C00-C97): **
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Influenza (Flu) and Pneumonia (J09-J18): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Diabetes Mellitus (E10-E14): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Intentional Self-Harm (Suicide: X60-X84, Y87.0): 
+Parkinson&#39;s Disease (G20): 
+All Other Causes: *
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Malignant Neoplasms (Cancer: C00-C97): *
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Diabetes Mellitus (E10-E14): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Chronic Liver Disease and Cirrhosis (K70, K73): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+All Other Causes: **
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ****
+Malignant Neoplasms (Cancer: C00-C97): ***
+Diabetes Mellitus (E10-E14): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Assault (Homicide: Y87.1, X85-Y09): 
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+All Other Causes: ***
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ******
+Malignant Neoplasms (Cancer: C00-C97): ****
+Influenza (Flu) and Pneumonia (J09-J18): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Diabetes Mellitus (E10-E14): 
+Intentional Self-Harm (Suicide: X60-X84, Y87.0): 
+Alzheimer&#39;s Disease (G30): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+All Other Causes: ***
+Malignant Neoplasms (Cancer: C00-C97): *
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *
+Cerebrovascular Disease (Stroke: I60-I69): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Diabetes Mellitus (E10-E14): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Alzheimer&#39;s Disease (G30): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Intentional Self-Harm (Suicide: U03, X60-X84, Y87.0): 
+All Other Causes: *
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Malignant Neoplasms (Cancer: C00-C97): *
+Diabetes Mellitus (E10-E14): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Alzheimer&#39;s Disease (G30): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Chronic Liver Disease and Cirrhosis (K70, K73-K74): 
+All Other Causes: *
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ****
+Malignant Neoplasms (Cancer: C00-C97): ***
+Diabetes Mellitus (E10-E14): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Alzheimer&#39;s Disease (G30): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+All Other Causes: ***
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ******
+Malignant Neoplasms (Cancer: C00-C97): ****
+Chronic Lower Respiratory Diseases (J40-J47): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Alzheimer&#39;s Disease (G30): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Diabetes Mellitus (E10-E14): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+All Other Causes: ***
+Malignant Neoplasms (Cancer: C00-C97): **
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Influenza (Flu) and Pneumonia (J09-J18): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Diabetes Mellitus (E10-E14): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Alzheimer&#39;s Disease (G30): 
+Intentional Self-Harm (Suicide: U03, X60-X84, Y87.0): 
+All Other Causes: *
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Malignant Neoplasms (Cancer: C00-C97): **
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Diabetes Mellitus (E10-E14): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Chronic Liver Disease and Cirrhosis (K70, K73-K74): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+All Other Causes: **
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ****
+Malignant Neoplasms (Cancer: C00-C97): ***
+Diabetes Mellitus (E10-E14): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Assault (Homicide: U01-U02, Y87.1, X85-Y09): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+All Other Causes: ***
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ******
+Malignant Neoplasms (Cancer: C00-C97): ****
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Diabetes Mellitus (E10-E14): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Intentional Self-Harm (Suicide: U03, X60-X84, Y87.0): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+All Other Causes: ***
+Malignant Neoplasms (Cancer: C00-C97): *
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *
+Cerebrovascular Disease (Stroke: I60-I69): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Diabetes Mellitus (E10-E14): 
+Alzheimer&#39;s Disease (G30): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Intentional Self-Harm (Suicide: U03, X60-X84, Y87.0): 
+All Other Causes: *
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Malignant Neoplasms (Cancer: C00-C97): *
+Cerebrovascular Disease (Stroke: I60-I69): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Diabetes Mellitus (E10-E14): 
+Alzheimer&#39;s Disease (G30): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Chronic Liver Disease and Cirrhosis (K70, K73-K74): 
+All Other Causes: *
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ****
+Malignant Neoplasms (Cancer: C00-C97): ***
+Diabetes Mellitus (E10-E14): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Alzheimer&#39;s Disease (G30): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Human Immunodeficiency Virus Disease (HIV: B20-B24): 
+All Other Causes: **
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ******
+Malignant Neoplasms (Cancer: C00-C97): ****
+Chronic Lower Respiratory Diseases (J40-J47): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Alzheimer&#39;s Disease (G30): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Diabetes Mellitus (E10-E14): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+All Other Causes: ***
+Malignant Neoplasms (Cancer: C00-C97): **
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Cerebrovascular Disease (Stroke: I60-I69): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Diabetes Mellitus (E10-E14): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Intentional Self-Harm (Suicide: U03, X60-X84, Y87.0): 
+Alzheimer&#39;s Disease (G30): 
+All Other Causes: *
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Malignant Neoplasms (Cancer: C00-C97): *
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Diabetes Mellitus (E10-E14): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Chronic Liver Disease and Cirrhosis (K70, K73-K74): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+All Other Causes: **
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *****
+Malignant Neoplasms (Cancer: C00-C97): ***
+Diabetes Mellitus (E10-E14): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Assault (Homicide: U01-U02, Y87.1, X85-Y09): 
+All Other Causes: ***
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ******
+Malignant Neoplasms (Cancer: C00-C97): ****
+Essential Hypertension and Renal Diseases (I10, I12): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Diabetes Mellitus (E10-E14): 
+Intentional Self-Harm (Suicide: U03, X60-X84, Y87.0): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+All Other Causes: ***
+Intentional Self-Harm (Suicide: U03, X60-X84, Y87.0): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Parkinson&#39;s Disease (G20): 
+Alzheimer&#39;s Disease (G30): 
+Nephritis, Nephrotic Syndrome and Nephrisis (N00-N07, N17-N19, N25-N27): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Chronic Liver Disease and Cirrhosis (K70, K73-K74): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Alzheimer&#39;s Disease (G30): 
+Intentional Self-Harm (Suicide: U03, X60-X84, Y87.0): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Nephritis, Nephrotic Syndrome and Nephrisis (N00-N07, N17-N19, N25-N27): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Alzheimer&#39;s Disease (G30): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Diabetes Mellitus (E10-E14): 
+Diabetes Mellitus (E10-E14): 
+Chronic Liver Disease and Cirrhosis (K70, K73-K74): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Diabetes Mellitus (E10-E14): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Certain Conditions originating in the Perinatal Period (P00-P96): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Intentional Self-Harm (Suicide: U03, X60-X84, Y87.0): 
+Alzheimer&#39;s Disease (G30): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Diabetes Mellitus (E10-E14): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Chronic Liver Disease and Cirrhosis (K70, K73-K74): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Assault (Homicide: U01-U02, Y87.1, X85-Y09): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Diabetes Mellitus (E10-E14): 
+Alzheimer&#39;s Disease (G30): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Diabetes Mellitus (E10-E14): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Certain Conditions originating in the Perinatal Period (P00-P96): 
+Diabetes Mellitus (E10-E14): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Alzheimer&#39;s Disease (G30): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Diabetes Mellitus (E10-E14): 
+Diabetes Mellitus (E10-E14): 
+Diabetes Mellitus (E10-E14): 
+All Other Causes: *
+Malignant Neoplasms (Cancer: C00-C97): *
+All Other Causes: *
+All Other Causes: *
+Malignant Neoplasms (Cancer: C00-C97): *
+Malignant Neoplasms (Cancer: C00-C97): *
+All Other Causes: *
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *
+Malignant Neoplasms (Cancer: C00-C97): **
+All Other Causes: **
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Malignant Neoplasms (Cancer: C00-C97): **
+Malignant Neoplasms (Cancer: C00-C97): **
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+All Other Causes: **
+All Other Causes: ***
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ***
+All Other Causes: ***
+All Other Causes: ***
+Malignant Neoplasms (Cancer: C00-C97): ***
+All Other Causes: ***
+Malignant Neoplasms (Cancer: C00-C97): ***
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ****
+Malignant Neoplasms (Cancer: C00-C97): ****
+Malignant Neoplasms (Cancer: C00-C97): ****
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *****
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *****
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ******
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ******
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Malignant Neoplasms (Cancer: C00-C97): **
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Diabetes Mellitus (E10-E14): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Chronic Liver Disease and Cirrhosis (K70, K73-K74): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+All Other Causes: **
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Malignant Neoplasms (Cancer: C00-C97): **
+Cerebrovascular Disease (Stroke: I60-I69): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Diabetes Mellitus (E10-E14): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Intentional Self-Harm (Suicide: U03, X60-X84, Y87.0): 
+Alzheimer&#39;s Disease (G30): 
+All Other Causes: *
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ******
+Malignant Neoplasms (Cancer: C00-C97): ****
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Diabetes Mellitus (E10-E14): 
+Intentional Self-Harm (Suicide: U03, X60-X84, Y87.0): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+All Other Causes: ***
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *****
+Malignant Neoplasms (Cancer: C00-C97): ***
+Diabetes Mellitus (E10-E14): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Assault (Homicide: U01-U02, Y87.1, X85-Y09): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+All Other Causes: ***
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ****
+Malignant Neoplasms (Cancer: C00-C97): *
+Diabetes Mellitus (E10-E14): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Mental and Behavioral Disorders due to Use of Alcohol (F10): 
+Certain Conditions originating in the Perinatal Period (P00-P96): 
+Chronic Liver Disease and Cirrhosis (K70, K73-K74): 
+All Other Causes: ***
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Malignant Neoplasms (Cancer: C00-C97): *
+Cerebrovascular Disease (Stroke: I60-I69): 
+Alzheimer&#39;s Disease (G30): 
+Diabetes Mellitus (E10-E14): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+All Other Causes: **
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *
+Malignant Neoplasms (Cancer: C00-C97): *
+Cerebrovascular Disease (Stroke: I60-I69): 
+Diabetes Mellitus (E10-E14): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Alzheimer&#39;s Disease (G30): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Intentional Self-Harm (Suicide: U03, X60-X84, Y87.0): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+All Other Causes: *
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *****
+Malignant Neoplasms (Cancer: C00-C97): ***
+Chronic Lower Respiratory Diseases (J40-J47): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Alzheimer&#39;s Disease (G30): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Diabetes Mellitus (E10-E14): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+All Other Causes: ***
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *****
+Malignant Neoplasms (Cancer: C00-C97): ***
+Diabetes Mellitus (E10-E14): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Covid-19: *****
+Influenza (Flu) and Pneumonia (J09-J18): 
+Alzheimer&#39;s Disease (G30): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Nephritis, Nephrotic Syndrome and Nephrisis (N00-N07, N17-N19, N25-N27): 
+All Other Causes: ***
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Malignant Neoplasms (Cancer: C00-C97): *
+Diabetes Mellitus (E10-E14): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Essential Hypertension and Renal Diseases (I10, I12): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Certain Conditions originating in the Perinatal Period (P00-P96): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Intentional Self-Harm (Suicide: U03, X60-X84, Y87.0): 
+All Other Causes: *
+Covid-19: ******
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ***
+Malignant Neoplasms (Cancer: C00-C97): *
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Diabetes Mellitus (E10-E14): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Chronic Liver Disease and Cirrhosis (K70, K73-K74): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+All Other Causes: **
+Covid-19: ****
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ***
+Malignant Neoplasms (Cancer: C00-C97): **
+Influenza (Flu) and Pneumonia (J09-J18): 
+Diabetes Mellitus (E10-E14): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Essential Hypertension and Renal Diseases (I10, I12, I15): 
+Intentional Self-Harm (Suicide: U03, X60-X84, Y87.0): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+All Other Causes: **
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ******
+Covid-19: ****
+Malignant Neoplasms (Cancer: C00-C97): ***
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Diabetes Mellitus (E10-E14): 
+Essential Hypertension and Renal Diseases (I10, I12, I15): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+All Other Causes: ***
+Covid-19: *******
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *******
+Malignant Neoplasms (Cancer: C00-C97): ***
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): *
+Diabetes Mellitus (E10-E14): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Assault (Homicide: U01-U02, Y87.1, X85-Y09): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Essential Hypertension and Renal Diseases (I10, I12, I15): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+All Other Causes: ****
+Malignant Neoplasms (Cancer: C00-C97): ***
+Covid-19: ***
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Malignant Neoplasms (Cancer: C00-C97): *
+Cerebrovascular Disease (Stroke: I60-I69): 
+Diabetes Mellitus (E10-E14): 
+Alzheimer&#39;s Disease (G30): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Essential Hypertension and Renal Diseases (I10, I12, I15): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+All Other Causes: **
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Covid-19: **
+Malignant Neoplasms (Cancer: C00-C97): *
+Cerebrovascular Disease (Stroke: I60-I69): 
+Essential Hypertension and Renal Diseases (I10, I12, I15): 
+Diabetes Mellitus (E10-E14): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Alzheimer&#39;s Disease (G30): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+All Other Causes: *
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ******
+Malignant Neoplasms (Cancer: C00-C97): ***
+Covid-19: ***
+Cerebrovascular Disease (Stroke: I60-I69): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Alzheimer&#39;s Disease (G30): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Essential Hypertension and Renal Diseases (I10, I12, I15): 
+Diabetes Mellitus (E10-E14): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+All Other Causes: ***
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ******
+Diabetes Mellitus (E10-E14): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Essential Hypertension and Renal Diseases (I10, I12, I15): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Alzheimer&#39;s Disease (G30): 
+All Other Causes: ****
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Covid-19: **
+Malignant Neoplasms (Cancer: C00-C97): *
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): *
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Diabetes Mellitus (E10-E14): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Chronic Liver Disease and Cirrhosis (K70, K73-K74): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+All Other Causes: **
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Covid-19: **
+Malignant Neoplasms (Cancer: C00-C97): **
+Cerebrovascular Disease (Stroke: I60-I69): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Diabetes Mellitus (E10-E14): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Essential Hypertension and Renal Diseases (I10, I12, I15): 
+Intentional Self-Harm (Suicide: U03, X60-X84, Y87.0): 
+All Other Causes: **
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *****
+Malignant Neoplasms (Cancer: C00-C97): ***
+Covid-19: **
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Diabetes Mellitus (E10-E14): 
+Essential Hypertension and Renal Diseases (I10, I12, I15): 
+All Other Causes: ****
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *****
+Malignant Neoplasms (Cancer: C00-C97): ***
+Covid-19: **
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): *
+Diabetes Mellitus (E10-E14): 
+Assault (Homicide: U01-U02, Y87.1, X85-Y09): 
+Cerebrovascular Disease (Stroke: I60-I69): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Essential Hypertension and Renal Diseases (I10, I12, I15): 
+All Other Causes: ****
+Diseases of Heart (I00-I09, I11, I13, I20-I51): **
+Malignant Neoplasms (Cancer: C00-C97): *
+Covid-19: *
+Cerebrovascular Disease (Stroke: I60-I69): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Alzheimer&#39;s Disease (G30): 
+Diabetes Mellitus (E10-E14): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Essential Hypertension and Renal Diseases (I10, I12, I15): 
+All Other Causes: **
+Malignant Neoplasms (Cancer: C00-C97): *
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *
+Covid-19: *
+Cerebrovascular Disease (Stroke: I60-I69): 
+Diabetes Mellitus (E10-E14): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Essential Hypertension and Renal Diseases (I10, I12, I15): 
+Alzheimer&#39;s Disease (G30): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+All Other Causes: *
+Diseases of Heart (I00-I09, I11, I13, I20-I51): *****
+Malignant Neoplasms (Cancer: C00-C97): ***
+Covid-19: *
+Cerebrovascular Disease (Stroke: I60-I69): 
+Alzheimer&#39;s Disease (G30): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Essential Hypertension and Renal Diseases (I10, I12, I15): 
+Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+All Other Causes: ***
+Diseases of Heart (I00-I09, I11, I13, I20-I51): ****
+Malignant Neoplasms (Cancer: C00-C97): ***
+Covid-19: **
+Cerebrovascular Disease (Stroke: I60-I69): 
+Diabetes Mellitus (E10-E14): 
+Essential Hypertension and Renal Diseases (I10, I12, I15): 
+Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44): 
+Influenza (Flu) and Pneumonia (J09-J18): 
+Chronic Lower Respiratory Diseases (J40-J47): 
+Alzheimer&#39;s Disease (G30): 
+All Other Causes: ****
+</pre></div>
+</div>
+</div>
+</div>
+<p>.plot() and .plotly are much easier to use for data visualization but we couldn’t use those for this assignment. I knew I had to create a function since we couldn’t import any external packages. I used Python Standard Library and Pandas API Reference to complete the assignment.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Welcome to Diane’s JupyterBook</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Project_2_dw3149.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Project 2: Cancer Rates vs. Pharmaceutical Sales Across Countries</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,1940 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Project 3: Gender-Based Violence and Victim Age in NYC &#8212; Diane's Jupyter Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'project_3';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Project 2: Cancer Rates vs. Pharmaceutical Sales Across Countries" href="Project_2_dw3149.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+<script>
+require.config({
+  paths: {
+    'plotly': 'https://cdn.plot.ly/plotly-latest.min'
+  }
+});
+</script>
+</head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Diane's Jupyter Book</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Welcome to Diane’s JupyterBook
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Project_1_Death_Rate_dw3149.html">Project 1: Leading Causes of Death in New York City</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Project_2_dw3149.html">Project 2: Cancer Rates vs. Pharmaceutical Sales Across Countries</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Project 3: Gender-Based Violence and Victim Age in NYC</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/project_3.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Project 3: Gender-Based Violence and Victim Age in NYC</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="project-3-gender-based-violence-and-victim-age-in-nyc">
+<h1>Project 3: Gender-Based Violence and Victim Age in NYC<a class="headerlink" href="#project-3-gender-based-violence-and-victim-age-in-nyc" title="Permalink to this heading">#</a></h1>
+<p>This project examines incidents of gender-based violence (GBV) in New York City using felony assault data from NYC OpenData for 2020 and 2021. The analysis investigates whether incidents of domestic violence increase as victim age decreases. Using Plotly Express for interactive scatter plots and Spearman correlation analysis, the project finds a quadratic relationship between victim age and incident frequency, with a peak at age 30. The correlation coefficient of -0.66 supports an inverse relationship after age 30, indicating that GBV incidents decline as victim age increases beyond that point.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Project 3: Gender-Based Violence and Victim Age in NYC</span>
+
+<span class="kn">import</span> <span class="nn">plotly.io</span> <span class="k">as</span> <span class="nn">pio</span>
+
+<span class="n">pio</span><span class="o">.</span><span class="n">renderers</span><span class="o">.</span><span class="n">default</span> <span class="o">=</span> <span class="s2">&quot;vscode+jupyterlab+notebook_connected&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><a class="reference external" href="http://plotly.io">plotly.io</a> allows to save a Plotly figure as an image or an HTML file. This will be important when I go to publish this work on this website. A plotly figure can be data visualization in the form of a chart or graph.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>pandas and plotly.express are packages with native python functions. You can think of them like tool boxes full of useful tools needed to perform a variety for jobs.
+For example, later on in this webpage you will see that I calculated the mean of my data by writing “.mean()” at the end of the line of code.
+“.mean()” is a function that I did not have to create, but a function that already existed in the package called pandas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">GBV</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;ENDGBV__The_Intersection_of_Domestic_Violence__Race_Ethnicity_and_Sex_20241207.csv&quot;</span><span class="p">)</span>
+<span class="n">GBV</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Diane\AppData\Local\Temp\ipykernel_1260\1006744794.py:1: DtypeWarning:
+
+Columns (5,6,8,9) have mixed types. Specify dtype option on import or set low_memory=False.
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Offense Type</th>
+      <th>Report Date</th>
+      <th>Incident Precinct Code</th>
+      <th>Borough Name</th>
+      <th>Intimate Relationship Flag</th>
+      <th>Victim Race</th>
+      <th>Victim Sex</th>
+      <th>Victim Reported Age</th>
+      <th>Suspect Race</th>
+      <th>Suspect Sex</th>
+      <th>Suspect Reported Age</th>
+      <th>COMMDIST</th>
+      <th>Poverty</th>
+      <th>Median Income</th>
+      <th>Unemployment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>FELONY ASSAULT</td>
+      <td>07/15/2020</td>
+      <td>52</td>
+      <td>BRONX</td>
+      <td>Yes</td>
+      <td>WHITE HISPANIC</td>
+      <td>MALE</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>FEMALE</td>
+      <td>NaN</td>
+      <td>207.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>FELONY ASSAULT</td>
+      <td>04/17/2020</td>
+      <td>113</td>
+      <td>QUEENS</td>
+      <td>Yes</td>
+      <td>WHITE HISPANIC</td>
+      <td>FEMALE</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>MALE</td>
+      <td>NaN</td>
+      <td>412.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>FELONY ASSAULT</td>
+      <td>03/19/2020</td>
+      <td>41</td>
+      <td>BRONX</td>
+      <td>No</td>
+      <td>WHITE HISPANIC</td>
+      <td>MALE</td>
+      <td>3.0</td>
+      <td>BLACK</td>
+      <td>MALE</td>
+      <td>NaN</td>
+      <td>202.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>FELONY ASSAULT</td>
+      <td>04/29/2020</td>
+      <td>45</td>
+      <td>BRONX</td>
+      <td>No</td>
+      <td>WHITE HISPANIC</td>
+      <td>MALE</td>
+      <td>5.0</td>
+      <td>WHITE</td>
+      <td>MALE</td>
+      <td>NaN</td>
+      <td>210.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>FELONY ASSAULT</td>
+      <td>10/18/2020</td>
+      <td>47</td>
+      <td>BRONX</td>
+      <td>Yes</td>
+      <td>WHITE HISPANIC</td>
+      <td>MALE</td>
+      <td>5.0</td>
+      <td>BLACK</td>
+      <td>MALE</td>
+      <td>NaN</td>
+      <td>212.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>483785</th>
+      <td>DIR</td>
+      <td>04/30/2021</td>
+      <td>109</td>
+      <td>QUEENS</td>
+      <td>MISSING</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>483786</th>
+      <td>DIR</td>
+      <td>10/30/2020</td>
+      <td>42</td>
+      <td>BRONX</td>
+      <td>MISSING</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>483787</th>
+      <td>DIR</td>
+      <td>11/07/2020</td>
+      <td>42</td>
+      <td>BRONX</td>
+      <td>MISSING</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>483788</th>
+      <td>DIR</td>
+      <td>12/04/2020</td>
+      <td>47</td>
+      <td>BRONX</td>
+      <td>MISSING</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>483789</th>
+      <td>DIR</td>
+      <td>06/15/2020</td>
+      <td>94</td>
+      <td>BROOKLYN</td>
+      <td>MISSING</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>483790 rows × 15 columns</p>
+</div></div></div>
+</div>
+<p>In the above, I loaded the data that I wanted to use into Jupyter Notebook. Jupyter Notebook is the platform I used to code this project. The code returns a “preview” of the data for me. There is a dtype warning indicating that there are different dtypes in this CSV. A dtype can be “float”, “integer”, or “object” to name a few. “Float” is a number with a decimal, “integer” is a whole number without a decimal, and “object” can be a string of letters or words. You will see some values called NaN which means “not a number”. NaN is a placeholder for missing values or not applicable values as having zeroes in my data set can skew my data analysis. The dtype warning is nothing to be worried about just yet. In the next few lines of code, I will look through the values I want to analyze to see if I have to convert any values so that they are all the same dtypes before I start manipulating the data. Having different dtypes is not always a bad thing when it comes to data analysis, you have to use your better judgement in whether you need to convert or drop values.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">GBV</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Offense Type</th>
+      <th>Report Date</th>
+      <th>Incident Precinct Code</th>
+      <th>Borough Name</th>
+      <th>Intimate Relationship Flag</th>
+      <th>Victim Race</th>
+      <th>Victim Sex</th>
+      <th>Victim Reported Age</th>
+      <th>Suspect Race</th>
+      <th>Suspect Sex</th>
+      <th>Suspect Reported Age</th>
+      <th>COMMDIST</th>
+      <th>Poverty</th>
+      <th>Median Income</th>
+      <th>Unemployment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>FELONY ASSAULT</td>
+      <td>07/15/2020</td>
+      <td>52</td>
+      <td>BRONX</td>
+      <td>Yes</td>
+      <td>WHITE HISPANIC</td>
+      <td>MALE</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>FEMALE</td>
+      <td>NaN</td>
+      <td>207.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>FELONY ASSAULT</td>
+      <td>04/17/2020</td>
+      <td>113</td>
+      <td>QUEENS</td>
+      <td>Yes</td>
+      <td>WHITE HISPANIC</td>
+      <td>FEMALE</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>MALE</td>
+      <td>NaN</td>
+      <td>412.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>FELONY ASSAULT</td>
+      <td>03/19/2020</td>
+      <td>41</td>
+      <td>BRONX</td>
+      <td>No</td>
+      <td>WHITE HISPANIC</td>
+      <td>MALE</td>
+      <td>3.0</td>
+      <td>BLACK</td>
+      <td>MALE</td>
+      <td>NaN</td>
+      <td>202.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>FELONY ASSAULT</td>
+      <td>04/29/2020</td>
+      <td>45</td>
+      <td>BRONX</td>
+      <td>No</td>
+      <td>WHITE HISPANIC</td>
+      <td>MALE</td>
+      <td>5.0</td>
+      <td>WHITE</td>
+      <td>MALE</td>
+      <td>NaN</td>
+      <td>210.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>FELONY ASSAULT</td>
+      <td>10/18/2020</td>
+      <td>47</td>
+      <td>BRONX</td>
+      <td>Yes</td>
+      <td>WHITE HISPANIC</td>
+      <td>MALE</td>
+      <td>5.0</td>
+      <td>BLACK</td>
+      <td>MALE</td>
+      <td>NaN</td>
+      <td>212.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>FELONY ASSAULT</td>
+      <td>10/18/2020</td>
+      <td>47</td>
+      <td>BRONX</td>
+      <td>Yes</td>
+      <td>WHITE HISPANIC</td>
+      <td>MALE</td>
+      <td>5.0</td>
+      <td>WHITE HISPANIC</td>
+      <td>MALE</td>
+      <td>NaN</td>
+      <td>212.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>FELONY ASSAULT</td>
+      <td>10/27/2021</td>
+      <td>75</td>
+      <td>BROOKLYN</td>
+      <td>No</td>
+      <td>WHITE HISPANIC</td>
+      <td>MALE</td>
+      <td>8.0</td>
+      <td>WHITE HISPANIC</td>
+      <td>MALE</td>
+      <td>NaN</td>
+      <td>305.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>FELONY ASSAULT</td>
+      <td>12/27/2021</td>
+      <td>107</td>
+      <td>QUEENS</td>
+      <td>No</td>
+      <td>WHITE HISPANIC</td>
+      <td>MALE</td>
+      <td>8.0</td>
+      <td>WHITE HISPANIC</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>408.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>FELONY ASSAULT</td>
+      <td>10/21/2021</td>
+      <td>120</td>
+      <td>STATEN ISLAND</td>
+      <td>No</td>
+      <td>WHITE HISPANIC</td>
+      <td>FEMALE</td>
+      <td>8.0</td>
+      <td>NaN</td>
+      <td>MALE</td>
+      <td>NaN</td>
+      <td>501.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>FELONY ASSAULT</td>
+      <td>11/24/2021</td>
+      <td>83</td>
+      <td>BROOKLYN</td>
+      <td>No</td>
+      <td>WHITE HISPANIC</td>
+      <td>FEMALE</td>
+      <td>9.0</td>
+      <td>WHITE HISPANIC</td>
+      <td>MALE</td>
+      <td>NaN</td>
+      <td>304.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>.head() returns the first five rows of a data set. I wrote in 10 to see the first 10 rows.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">GBV</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Offense Type</th>
+      <th>Report Date</th>
+      <th>Incident Precinct Code</th>
+      <th>Borough Name</th>
+      <th>Intimate Relationship Flag</th>
+      <th>Victim Race</th>
+      <th>Victim Sex</th>
+      <th>Victim Reported Age</th>
+      <th>Suspect Race</th>
+      <th>Suspect Sex</th>
+      <th>Suspect Reported Age</th>
+      <th>COMMDIST</th>
+      <th>Poverty</th>
+      <th>Median Income</th>
+      <th>Unemployment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>483780</th>
+      <td>DIR</td>
+      <td>07/05/2021</td>
+      <td>50</td>
+      <td>BRONX</td>
+      <td>MISSING</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>483781</th>
+      <td>DIR</td>
+      <td>07/05/2021</td>
+      <td>50</td>
+      <td>BRONX</td>
+      <td>MISSING</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>483782</th>
+      <td>DIR</td>
+      <td>09/10/2021</td>
+      <td>61</td>
+      <td>BROOKLYN</td>
+      <td>MISSING</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>483783</th>
+      <td>DIR</td>
+      <td>09/22/2021</td>
+      <td>63</td>
+      <td>BROOKLYN</td>
+      <td>MISSING</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>483784</th>
+      <td>DIR</td>
+      <td>06/17/2021</td>
+      <td>94</td>
+      <td>BROOKLYN</td>
+      <td>MISSING</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>483785</th>
+      <td>DIR</td>
+      <td>04/30/2021</td>
+      <td>109</td>
+      <td>QUEENS</td>
+      <td>MISSING</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>483786</th>
+      <td>DIR</td>
+      <td>10/30/2020</td>
+      <td>42</td>
+      <td>BRONX</td>
+      <td>MISSING</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>483787</th>
+      <td>DIR</td>
+      <td>11/07/2020</td>
+      <td>42</td>
+      <td>BRONX</td>
+      <td>MISSING</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>483788</th>
+      <td>DIR</td>
+      <td>12/04/2020</td>
+      <td>47</td>
+      <td>BRONX</td>
+      <td>MISSING</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>483789</th>
+      <td>DIR</td>
+      <td>06/15/2020</td>
+      <td>94</td>
+      <td>BROOKLYN</td>
+      <td>MISSING</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>.tail() returns the last five rows of a data set. I wrote in 10 to see the last 10 rows.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">GBV</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Offense Type</th>
+      <th>Report Date</th>
+      <th>Incident Precinct Code</th>
+      <th>Borough Name</th>
+      <th>Intimate Relationship Flag</th>
+      <th>Victim Race</th>
+      <th>Victim Sex</th>
+      <th>Victim Reported Age</th>
+      <th>Suspect Race</th>
+      <th>Suspect Sex</th>
+      <th>Suspect Reported Age</th>
+      <th>COMMDIST</th>
+      <th>Poverty</th>
+      <th>Median Income</th>
+      <th>Unemployment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>400979</th>
+      <td>DIR</td>
+      <td>10/24/2021</td>
+      <td>52</td>
+      <td>BRONX</td>
+      <td>MISSING</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>207.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>310775</th>
+      <td>DIR</td>
+      <td>12/24/2021</td>
+      <td>101</td>
+      <td>QUEENS</td>
+      <td>YES</td>
+      <td>BLACK</td>
+      <td>FEMALE</td>
+      <td>39.0</td>
+      <td>BLACK</td>
+      <td>MALE</td>
+      <td>37.0</td>
+      <td>414.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>144419</th>
+      <td>DIR</td>
+      <td>05/12/2021</td>
+      <td>110</td>
+      <td>QUEENS</td>
+      <td>YES</td>
+      <td>OTHER</td>
+      <td>MALE</td>
+      <td>30.0</td>
+      <td>OTHER</td>
+      <td>MALE</td>
+      <td>22.0</td>
+      <td>404.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>313751</th>
+      <td>DIR</td>
+      <td>05/30/2021</td>
+      <td>83</td>
+      <td>BROOKLYN</td>
+      <td>YES</td>
+      <td>BLACK</td>
+      <td>FEMALE</td>
+      <td>37.0</td>
+      <td>BLACK</td>
+      <td>MALE</td>
+      <td>38.0</td>
+      <td>304.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>462555</th>
+      <td>DIR</td>
+      <td>02/09/2020</td>
+      <td>43</td>
+      <td>BRONX</td>
+      <td>MISSING</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>209.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>100288</th>
+      <td>DIR</td>
+      <td>08/17/2020</td>
+      <td>121</td>
+      <td>STATEN ISLAND</td>
+      <td>YES</td>
+      <td>WHITE</td>
+      <td>MALE</td>
+      <td>35.0</td>
+      <td>WHITE</td>
+      <td>FEMALE</td>
+      <td>44.0</td>
+      <td>501.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>260864</th>
+      <td>DIR</td>
+      <td>09/02/2021</td>
+      <td>25</td>
+      <td>MANHATTAN</td>
+      <td>YES</td>
+      <td>BLACK</td>
+      <td>FEMALE</td>
+      <td>27.0</td>
+      <td>BLACK</td>
+      <td>MALE</td>
+      <td>27.0</td>
+      <td>111.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>296902</th>
+      <td>FELONY ASSAULT</td>
+      <td>05/02/2021</td>
+      <td>100</td>
+      <td>QUEENS</td>
+      <td>Yes</td>
+      <td>BLACK</td>
+      <td>FEMALE</td>
+      <td>31.0</td>
+      <td>BLACK</td>
+      <td>MALE</td>
+      <td>34.0</td>
+      <td>414.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>447702</th>
+      <td>DIR</td>
+      <td>01/27/2021</td>
+      <td>25</td>
+      <td>MANHATTAN</td>
+      <td>MISSING</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>111.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>374914</th>
+      <td>DIR</td>
+      <td>11/18/2021</td>
+      <td>103</td>
+      <td>QUEENS</td>
+      <td>NO</td>
+      <td>ASIAN / PACIFIC ISLANDER</td>
+      <td>MALE</td>
+      <td>NaN</td>
+      <td>ASIAN / PACIFIC ISLANDER</td>
+      <td>FEMALE</td>
+      <td>33.0</td>
+      <td>412.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>.sample() shows you a random assortment of rows from your data set. I also wrote in 10 here so that it would generate 10 random rows from my data set.</p>
+<p>Dataset to be used: <a class="reference external" href="https://data.cityofnewyork.us/Public-Safety/ENDGBV-The-Intersection-of-Domestic-Violence-Race-/2rb7-7eqa/about_data">https://data.cityofnewyork.us/Public-Safety/ENDGBV-The-Intersection-of-Domestic-Violence-Race-/2rb7-7eqa/about_data</a></p>
+<p>Analysis question: Do incidents of gender-based violence (GBV) increase as the age of the victim decreases? I am asking if there is an inverse relationship between incidents of violence and victims’ ages.</p>
+<p>Columns that will (likely) be used:</p>
+<p>“Victim Reported Age”</p>
+<p>“Number of Incidents” I will make a column in a new data frame called Number of Incidents for each age</p>
+<p>Hypothesis: I hypothesize that age and frequency of domestic violence are not correlated. The data will not show a relationship between age and GBV incidents. I expect to see points that are scattered randomly with no apparent trend.</p>
+<p>Site URL: <a class="reference external" href="https://vs-code.readthedocs.io/en/latest/index.html">https://vs-code.readthedocs.io/en/latest/index.html</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">GBV</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 483790 entries, 0 to 483789
+Data columns (total 15 columns):
+ #   Column                      Non-Null Count   Dtype  
+---  ------                      --------------   -----  
+ 0   Offense Type                483790 non-null  object 
+ 1   Report Date                 483790 non-null  object 
+ 2   Incident Precinct Code      483790 non-null  int64  
+ 3   Borough Name                483790 non-null  object 
+ 4   Intimate Relationship Flag  483790 non-null  object 
+ 5   Victim Race                 387733 non-null  object 
+ 6   Victim Sex                  394987 non-null  object 
+ 7   Victim Reported Age         344524 non-null  float64
+ 8   Suspect Race                367160 non-null  object 
+ 9   Suspect Sex                 374345 non-null  object 
+ 10  Suspect Reported Age        300802 non-null  float64
+ 11  COMMDIST                    483686 non-null  float64
+ 12  Poverty                     202325 non-null  float64
+ 13  Median Income               209141 non-null  float64
+ 14  Unemployment                201911 non-null  float64
+dtypes: float64(6), int64(1), object(8)
+memory usage: 55.4+ MB
+</pre></div>
+</div>
+</div>
+</div>
+<p>.info() returns all the columns, tells you the dtypes, as well as how many rows have values in the data set</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">GBV</span><span class="p">[</span><span class="s2">&quot;Victim Reported Age&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ nan,   3.,   5.,   8.,   9.,  10.,  11.,  12.,  13.,  14.,  15.,
+        16.,  17.,  18.,  19.,  20.,  21.,  22.,  23.,  24.,  25.,  26.,
+        27.,  28.,  29.,  30.,  31.,  32.,  33.,  34.,  35.,  36.,  37.,
+        38.,  39.,  40.,  41.,  42.,  43.,  44.,  45.,  46.,  47.,  48.,
+        49.,  50.,  51.,  52.,  53.,  54.,  55.,  56.,  58.,  59.,  60.,
+        62.,  67.,  71.,  73.,  82.,  65.,   4.,   6.,   7.,  76.,  63.,
+        68.,  74.,  57.,  70.,  75.,  83.,   1.,   2.,  64.,  69.,  78.,
+        66.,  77.,  72.,  61.,  79.,  84.,  85.,  86.,  81.,  91.,  80.,
+        88.,  89.,  87.,  90.,  92.,  93.,  94.,  95.,  96.,  97., 114.,
+        99.,  98., 100., 101., 110., 105., 104., 120.])
+</pre></div>
+</div>
+</div>
+</div>
+<p>.unique() in the way that I used it here shows how many unique values are in the column entitled “Victim Reported Age” in the data set. This is how you can find weird values that may not match with what you want to see from the specific column.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">GBV_list</span> <span class="o">=</span> <span class="n">GBV</span><span class="p">[</span><span class="s2">&quot;Victim Reported Age&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+<span class="n">GBV_list</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="nb">list</span><span class="p">(</span><span class="n">GBV_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1.0,
+ 2.0,
+ 3.0,
+ 4.0,
+ 5.0,
+ 6.0,
+ 7.0,
+ 8.0,
+ 9.0,
+ 10.0,
+ 11.0,
+ 12.0,
+ 13.0,
+ 14.0,
+ 15.0,
+ 16.0,
+ 17.0,
+ 18.0,
+ 19.0,
+ 20.0,
+ 21.0,
+ 22.0,
+ 23.0,
+ 24.0,
+ 25.0,
+ 26.0,
+ 27.0,
+ 28.0,
+ 29.0,
+ 30.0,
+ 31.0,
+ 32.0,
+ 33.0,
+ 34.0,
+ 35.0,
+ 36.0,
+ 37.0,
+ 38.0,
+ 39.0,
+ 40.0,
+ 41.0,
+ 42.0,
+ 43.0,
+ 44.0,
+ 45.0,
+ 46.0,
+ 47.0,
+ 48.0,
+ 49.0,
+ 50.0,
+ 51.0,
+ 52.0,
+ 53.0,
+ 54.0,
+ 55.0,
+ 56.0,
+ 57.0,
+ 58.0,
+ 59.0,
+ 60.0,
+ 61.0,
+ 62.0,
+ 63.0,
+ 64.0,
+ 65.0,
+ 66.0,
+ 67.0,
+ 68.0,
+ 69.0,
+ 70.0,
+ 71.0,
+ 72.0,
+ 73.0,
+ 74.0,
+ 75.0,
+ 76.0,
+ 77.0,
+ 78.0,
+ 79.0,
+ 80.0,
+ 81.0,
+ 82.0,
+ 83.0,
+ 84.0,
+ 85.0,
+ 86.0,
+ 87.0,
+ 88.0,
+ 89.0,
+ 90.0,
+ 91.0,
+ 92.0,
+ 93.0,
+ 94.0,
+ 95.0,
+ 96.0,
+ 97.0,
+ 98.0,
+ 99.0,
+ 100.0,
+ 101.0,
+ 104.0,
+ 105.0,
+ 110.0,
+ 114.0,
+ 120.0,
+ nan]
+</pre></div>
+</div>
+</div>
+</div>
+<p>I converted the array into a list because sometimes that makes the data easier to read.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">pd</span><span class="o">.</span><span class="n">option_context</span><span class="p">(</span><span class="s2">&quot;display.max_rows&quot;</span><span class="p">,</span> <span class="mi">1000</span><span class="p">):</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">GBV</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Victim Reported Age&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Victim Reported Age
+1.0        648
+2.0        682
+3.0        829
+4.0       1033
+5.0       1139
+6.0       1140
+7.0       1125
+8.0       1037
+9.0       1114
+10.0      1157
+11.0      1016
+12.0      1267
+13.0      1311
+14.0      1565
+15.0      1881
+16.0      2302
+17.0      2813
+18.0      3792
+19.0      4741
+20.0      5785
+21.0      6632
+22.0      7662
+23.0      8205
+24.0      8545
+25.0      9211
+26.0      9717
+27.0      9919
+28.0     10599
+29.0     10443
+30.0     10818
+31.0     10758
+32.0     10256
+33.0      9993
+34.0      9806
+35.0      9533
+36.0      8897
+37.0      8314
+38.0      8478
+39.0      8334
+40.0      7912
+41.0      7161
+42.0      6935
+43.0      6475
+44.0      6044
+45.0      5620
+46.0      5109
+47.0      4823
+48.0      4803
+49.0      4705
+50.0      4770
+51.0      4658
+52.0      4230
+53.0      4306
+54.0      4230
+55.0      4129
+56.0      3860
+57.0      3820
+58.0      3552
+59.0      3269
+60.0      3100
+61.0      2778
+62.0      2458
+63.0      2354
+64.0      2095
+65.0      1900
+66.0      1731
+67.0      1427
+68.0      1345
+69.0      1264
+70.0      1099
+71.0      1039
+72.0       999
+73.0       939
+74.0       818
+75.0       815
+76.0       775
+77.0       649
+78.0       592
+79.0       472
+80.0       442
+81.0       341
+82.0       360
+83.0       293
+84.0       296
+85.0       224
+86.0       190
+87.0       164
+88.0       151
+89.0        95
+90.0        89
+91.0        79
+92.0        67
+93.0        42
+94.0        34
+95.0        25
+96.0        15
+97.0        25
+98.0        12
+99.0         5
+100.0        5
+101.0        8
+104.0        1
+105.0        1
+110.0        1
+114.0        1
+120.0        1
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>.groupby() pulls certain that you want to see or work with from the data set. I want to work with age so I grouped the column “Victim Reported Age” and used .size() to give me the amount of times that age occurs in the data set. It is important to fully investigate your data so that you can determine how you want to clean your data before you go any further. From the above data investigation, I found that I did not need to convert dtypes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">counts</span> <span class="o">=</span> <span class="n">GBV</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Victim Reported Age&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Number of Incidents&quot;</span><span class="p">)</span>
+<span class="n">counts</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Victim Reported Age</th>
+      <th>Number of Incidents</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.0</td>
+      <td>648</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2.0</td>
+      <td>682</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3.0</td>
+      <td>829</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4.0</td>
+      <td>1033</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5.0</td>
+      <td>1139</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>101</th>
+      <td>104.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>102</th>
+      <td>105.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>103</th>
+      <td>110.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>104</th>
+      <td>114.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>105</th>
+      <td>120.0</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+<p>106 rows × 2 columns</p>
+</div></div></div>
+</div>
+<p>Same code as before but here I converted it into a dataframe. Pandas will add a index column on the very left that numbers the rows in the frame. I renamed the column that shows how many times an age occurs “Number of Incidents”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">counts</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Victim Reported Age&#39;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Number of Incidents&#39;</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Scatter Plot of Victim Age vs. Number of Incidents 2020-2021&#39;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Victim Reported Age&#39;</span><span class="p">:</span> <span class="s1">&#39;Victim Age&#39;</span><span class="p">,</span> <span class="s1">&#39;Number of Incidents&#39;</span><span class="p">:</span> <span class="s1">&#39;Number of Incidents&#39;</span><span class="p">},</span>
+    <span class="n">template</span><span class="o">=</span><span class="s1">&#39;plotly&#39;</span>
+<span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">        <script type="text/javascript">
+        window.PlotlyConfig = {MathJaxConfig: 'local'};
+        if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
+        if (typeof require !== 'undefined') {
+        require.undef("plotly");
+        requirejs.config({
+            paths: {
+                'plotly': ['https://cdn.plot.ly/plotly-2.32.0.min']
+            }
+        });
+        require(['plotly'], function(Plotly) {
+            window._Plotly = Plotly;
+        });
+        }
+        </script>
+        </div><div class="output text_html"><div>                            <div id="3b80f562-ed2b-436b-87e7-590d25fd47da" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("3b80f562-ed2b-436b-87e7-590d25fd47da")) {                    Plotly.newPlot(                        "3b80f562-ed2b-436b-87e7-590d25fd47da",                        [{"hovertemplate":"Victim Age=%{x}\u003cbr\u003eNumber of Incidents=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"markers","name":"","orientation":"v","showlegend":false,"x":[1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0,25.0,26.0,27.0,28.0,29.0,30.0,31.0,32.0,33.0,34.0,35.0,36.0,37.0,38.0,39.0,40.0,41.0,42.0,43.0,44.0,45.0,46.0,47.0,48.0,49.0,50.0,51.0,52.0,53.0,54.0,55.0,56.0,57.0,58.0,59.0,60.0,61.0,62.0,63.0,64.0,65.0,66.0,67.0,68.0,69.0,70.0,71.0,72.0,73.0,74.0,75.0,76.0,77.0,78.0,79.0,80.0,81.0,82.0,83.0,84.0,85.0,86.0,87.0,88.0,89.0,90.0,91.0,92.0,93.0,94.0,95.0,96.0,97.0,98.0,99.0,100.0,101.0,104.0,105.0,110.0,114.0,120.0],"xaxis":"x","y":[648,682,829,1033,1139,1140,1125,1037,1114,1157,1016,1267,1311,1565,1881,2302,2813,3792,4741,5785,6632,7662,8205,8545,9211,9717,9919,10599,10443,10818,10758,10256,9993,9806,9533,8897,8314,8478,8334,7912,7161,6935,6475,6044,5620,5109,4823,4803,4705,4770,4658,4230,4306,4230,4129,3860,3820,3552,3269,3100,2778,2458,2354,2095,1900,1731,1427,1345,1264,1099,1039,999,939,818,815,775,649,592,472,442,341,360,293,296,224,190,164,151,95,89,79,67,42,34,25,15,25,12,5,5,8,1,1,1,1,1],"yaxis":"y","type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Victim Age"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Number of Incidents"}},"legend":{"tracegroupgap":0},"title":{"text":"Scatter Plot of Victim Age vs. Number of Incidents 2020-2021"}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('3b80f562-ed2b-436b-87e7-590d25fd47da');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div></div></div>
+</div>
+<p>This is where the plotly.express package comes in handy! The shorthand px stands for the plotly.express package. I gave plotly.express the data frame called counts to work from. Match up the columns of data for the x-axis and y-axis. As with any graph, you have to title it and label your axes. fig.show() then produces your graph to see!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spearman_corr</span> <span class="o">=</span> <span class="n">counts</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;spearman&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Spearman Correlation: </span><span class="si">{</span><span class="n">spearman_corr</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Spearman Correlation:                      Victim Reported Age  Number of Incidents
+Victim Reported Age             1.000000            -0.656622
+Number of Incidents            -0.656622             1.000000
+</pre></div>
+</div>
+</div>
+</div>
+<p>I explain why I calculated the Spearman correlation further down in the webpage during my final analysis of the data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Extract the two variables</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">counts</span><span class="p">[</span><span class="s1">&#39;Victim Reported Age&#39;</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">counts</span><span class="p">[</span><span class="s1">&#39;Number of Incidents&#39;</span><span class="p">]</span>
+
+<span class="c1"># Calculate the correlation coefficient (Pearson by default)</span>
+<span class="n">correlation</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">corrcoef</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># Print the correlation value</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Correlation Coefficient (Pearson): </span><span class="si">{</span><span class="n">correlation</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Correlation Coefficient (Pearson): -0.51
+</pre></div>
+</div>
+</div>
+</div>
+<p>I calculated the Pearson coefficient out of curiosity as well as to explain why I did not chose to use this coefficient. I also wanted to see how close it is to the Spearman coefficient. The Pearson coeffeicient is not useful for this data analysis because the scatterplot shows a non-linear relationship of the variables and the Pearson correlation coefficient better describes linear relationships.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mode_value</span> <span class="o">=</span> <span class="n">GBV</span><span class="p">[</span><span class="s1">&#39;Victim Reported Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mode(s) of Victim Reported Age: </span><span class="si">{</span><span class="n">mode_value</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mode(s) of Victim Reported Age: [30.0]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Like I previously explained, .mode(), .mean(), .min(), .max(), .median() are all native functions or “tools” of the pandas package. I am storing the information I get from the line of code in a variable with new name like “mode_value” and then having the mode returned to me by using the print function. You will see this same action in the next few lines of code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">max_value</span> <span class="o">=</span> <span class="n">GBV</span><span class="p">[</span><span class="s1">&#39;Victim Reported Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The maximum value in &#39;Victim Reported Age&#39; is: </span><span class="si">{</span><span class="n">max_value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The maximum value in &#39;Victim Reported Age&#39; is: 120.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">min_value</span> <span class="o">=</span> <span class="n">GBV</span><span class="p">[</span><span class="s1">&#39;Victim Reported Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The minimum value in &#39;Victim Reported Age&#39; is: </span><span class="si">{</span><span class="n">min_value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The minimum value in &#39;Victim Reported Age&#39; is: 1.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mean_value</span> <span class="o">=</span> <span class="n">GBV</span><span class="p">[</span><span class="s1">&#39;Victim Reported Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The mean value in &#39;Victim Reported Age&#39; is: </span><span class="si">{</span><span class="n">mean_value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mean value in &#39;Victim Reported Age&#39; is: 37.193310190291534
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">median_value</span> <span class="o">=</span> <span class="n">GBV</span><span class="p">[</span><span class="s1">&#39;Victim Reported Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The median value in &#39;Victim Reported Age&#39; is: </span><span class="si">{</span><span class="n">median_value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The median value in &#39;Victim Reported Age&#39; is: 35.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>The scatterplot demonstrates enough evidence to reject my initial hypothesis. The data provided by NYC OpenData for years 2020 and 2021 shows a right-skewed distribution and quadratic relationship. The mean age for incidents of domestic violence will be higher than the median age for incidents of domestic violence. The scatter plot shows a weak negative correlation between the two variables with a correlation coefficient of -0.656622. I am using the Spearman correlation coefficient because it measures the monotonic relationship between two variables in non-linear data. What surprised me and disappointed me the most is seeing that incidents of GBV go as high as 120 years of age. Most of the data is centered around 20-40 years of age indicating that highest frequencies of domestic violence occur between 20-40 years of age. I did not distinguish between males and females so please bear in mind that this data analysis includes both genders. Columns in the data above show that domestic violence does happen to both genders. The scatterplot’s peak is shown at age 30 which tells me that it is the mode for our data. Toggling over the chart, one can see that the number of incidents at the age of 30 totaled 10,818,000. I coded for the mode to cross-check my scatter plot which also gave 30 years of age. In future analysis, one should study the relationship between the incidents of domestic violence and victim’s gender in NYC in the years of 2020 and 2021 to understand if the same relationship trends seen in this study still hold true.</p>
+<p>Research Question: Do incidents of gender-based violence (GBV) increase as the age of the victim decreases? I am asking if there is an inverse relationship between incidents of violence and victims’ ages.</p>
+<p>Answer: Yes, the second half of the scatterplot shows that after the age of 30 the incidents of GBV have an inverse relationship with victims’ age. The correlation coefficient of -0.656622 supports this conclusion. It is also important to note that because of the quadratic nature of the relationship between the variables that one can say that incidents of GBV increasing as age increases is also true.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Project_2_dw3149.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Project 2: Cancer Rates vs. Pharmaceutical Sales Across Countries</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

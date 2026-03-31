@@ -1,0 +1,177 @@
+Traceback (most recent call last):
+  File "C:\Users\Diane\anaconda3\Lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+    executenb(
+  File "C:\Users\Diane\anaconda3\Lib\site-packages\nbclient\client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diane\anaconda3\Lib\site-packages\jupyter_core\utils\__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Diane\anaconda3\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Diane\anaconda3\Lib\site-packages\nbclient\client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "C:\Users\Diane\anaconda3\Lib\site-packages\nbclient\client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\Diane\anaconda3\Lib\site-packages\nbclient\client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# your code here
+import pandas as pd 
+tables = pd.read_html("https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_area#Countries_and_dependencies_by_area")
+type(tables)
+------------------
+
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mHTTPError[0m                                 Traceback (most recent call last)
+Cell [1;32mIn[1], line 3[0m
+[0;32m      1[0m [38;5;66;03m# your code here[39;00m
+[0;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mpandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpd[39;00m 
+[1;32m----> 3[0m tables [38;5;241m=[39m pd[38;5;241m.[39mread_html([38;5;124m"[39m[38;5;124mhttps://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_area#Countries_and_dependencies_by_area[39m[38;5;124m"[39m)
+[0;32m      4[0m [38;5;28mtype[39m(tables)
+
+File [1;32m~\anaconda3\Lib\site-packages\pandas\io\html.py:1240[0m, in [0;36mread_html[1;34m(io, match, flavor, header, index_col, skiprows, attrs, parse_dates, thousands, encoding, decimal, converters, na_values, keep_default_na, displayed_only, extract_links, dtype_backend, storage_options)[0m
+[0;32m   1224[0m [38;5;28;01mif[39;00m [38;5;28misinstance[39m(io, [38;5;28mstr[39m) [38;5;129;01mand[39;00m [38;5;129;01mnot[39;00m [38;5;28many[39m(
+[0;32m   1225[0m     [
+[0;32m   1226[0m         is_file_like(io),
+[1;32m   (...)[0m
+[0;32m   1230[0m     ]
+[0;32m   1231[0m ):
+[0;32m   1232[0m     warnings[38;5;241m.[39mwarn(
+[0;32m   1233[0m         [38;5;124m"[39m[38;5;124mPassing literal html to [39m[38;5;124m'[39m[38;5;124mread_html[39m[38;5;124m'[39m[38;5;124m is deprecated and [39m[38;5;124m"[39m
+[0;32m   1234[0m         [38;5;124m"[39m[38;5;124mwill be removed in a future version. To read from a [39m[38;5;124m"[39m
+[1;32m   (...)[0m
+[0;32m   1237[0m         stacklevel[38;5;241m=[39mfind_stack_level(),
+[0;32m   1238[0m     )
+[1;32m-> 1240[0m [38;5;28;01mreturn[39;00m _parse(
+[0;32m   1241[0m     flavor[38;5;241m=[39mflavor,
+[0;32m   1242[0m     io[38;5;241m=[39mio,
+[0;32m   1243[0m     match[38;5;241m=[39mmatch,
+[0;32m   1244[0m     header[38;5;241m=[39mheader,
+[0;32m   1245[0m     index_col[38;5;241m=[39mindex_col,
+[0;32m   1246[0m     skiprows[38;5;241m=[39mskiprows,
+[0;32m   1247[0m     parse_dates[38;5;241m=[39mparse_dates,
+[0;32m   1248[0m     thousands[38;5;241m=[39mthousands,
+[0;32m   1249[0m     attrs[38;5;241m=[39mattrs,
+[0;32m   1250[0m     encoding[38;5;241m=[39mencoding,
+[0;32m   1251[0m     decimal[38;5;241m=[39mdecimal,
+[0;32m   1252[0m     converters[38;5;241m=[39mconverters,
+[0;32m   1253[0m     na_values[38;5;241m=[39mna_values,
+[0;32m   1254[0m     keep_default_na[38;5;241m=[39mkeep_default_na,
+[0;32m   1255[0m     displayed_only[38;5;241m=[39mdisplayed_only,
+[0;32m   1256[0m     extract_links[38;5;241m=[39mextract_links,
+[0;32m   1257[0m     dtype_backend[38;5;241m=[39mdtype_backend,
+[0;32m   1258[0m     storage_options[38;5;241m=[39mstorage_options,
+[0;32m   1259[0m )
+
+File [1;32m~\anaconda3\Lib\site-packages\pandas\io\html.py:983[0m, in [0;36m_parse[1;34m(flavor, io, match, attrs, encoding, displayed_only, extract_links, storage_options, **kwargs)[0m
+[0;32m    972[0m p [38;5;241m=[39m parser(
+[0;32m    973[0m     io,
+[0;32m    974[0m     compiled_match,
+[1;32m   (...)[0m
+[0;32m    979[0m     storage_options,
+[0;32m    980[0m )
+[0;32m    982[0m [38;5;28;01mtry[39;00m:
+[1;32m--> 983[0m     tables [38;5;241m=[39m p[38;5;241m.[39mparse_tables()
+[0;32m    984[0m [38;5;28;01mexcept[39;00m [38;5;167;01mValueError[39;00m [38;5;28;01mas[39;00m caught:
+[0;32m    985[0m     [38;5;66;03m# if `io` is an io-like object, check if it's seekable[39;00m
+[0;32m    986[0m     [38;5;66;03m# and try to rewind it before trying the next parser[39;00m
+[0;32m    987[0m     [38;5;28;01mif[39;00m [38;5;28mhasattr[39m(io, [38;5;124m"[39m[38;5;124mseekable[39m[38;5;124m"[39m) [38;5;129;01mand[39;00m io[38;5;241m.[39mseekable():
+
+File [1;32m~\anaconda3\Lib\site-packages\pandas\io\html.py:249[0m, in [0;36m_HtmlFrameParser.parse_tables[1;34m(self)[0m
+[0;32m    241[0m [38;5;28;01mdef[39;00m [38;5;21mparse_tables[39m([38;5;28mself[39m):
+[0;32m    242[0m [38;5;250m    [39m[38;5;124;03m"""[39;00m
+[0;32m    243[0m [38;5;124;03m    Parse and return all tables from the DOM.[39;00m
+[0;32m    244[0m 
+[1;32m   (...)[0m
+[0;32m    247[0m [38;5;124;03m    list of parsed (header, body, footer) tuples from tables.[39;00m
+[0;32m    248[0m [38;5;124;03m    """[39;00m
+[1;32m--> 249[0m     tables [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39m_parse_tables([38;5;28mself[39m[38;5;241m.[39m_build_doc(), [38;5;28mself[39m[38;5;241m.[39mmatch, [38;5;28mself[39m[38;5;241m.[39mattrs)
+[0;32m    250[0m     [38;5;28;01mreturn[39;00m ([38;5;28mself[39m[38;5;241m.[39m_parse_thead_tbody_tfoot(table) [38;5;28;01mfor[39;00m table [38;5;129;01min[39;00m tables)
+
+File [1;32m~\anaconda3\Lib\site-packages\pandas\io\html.py:806[0m, in [0;36m_LxmlFrameParser._build_doc[1;34m(self)[0m
+[0;32m    804[0m             [38;5;28;01mpass[39;00m
+[0;32m    805[0m     [38;5;28;01melse[39;00m:
+[1;32m--> 806[0m         [38;5;28;01mraise[39;00m e
+[0;32m    807[0m [38;5;28;01melse[39;00m:
+[0;32m    808[0m     [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m [38;5;28mhasattr[39m(r, [38;5;124m"[39m[38;5;124mtext_content[39m[38;5;124m"[39m):
+
+File [1;32m~\anaconda3\Lib\site-packages\pandas\io\html.py:785[0m, in [0;36m_LxmlFrameParser._build_doc[1;34m(self)[0m
+[0;32m    783[0m [38;5;28;01mtry[39;00m:
+[0;32m    784[0m     [38;5;28;01mif[39;00m is_url([38;5;28mself[39m[38;5;241m.[39mio):
+[1;32m--> 785[0m         [38;5;28;01mwith[39;00m get_handle(
+[0;32m    786[0m             [38;5;28mself[39m[38;5;241m.[39mio, [38;5;124m"[39m[38;5;124mr[39m[38;5;124m"[39m, storage_options[38;5;241m=[39m[38;5;28mself[39m[38;5;241m.[39mstorage_options
+[0;32m    787[0m         ) [38;5;28;01mas[39;00m f:
+[0;32m    788[0m             r [38;5;241m=[39m parse(f[38;5;241m.[39mhandle, parser[38;5;241m=[39mparser)
+[0;32m    789[0m     [38;5;28;01melse[39;00m:
+[0;32m    790[0m         [38;5;66;03m# try to parse the input in the simplest way[39;00m
+
+File [1;32m~\anaconda3\Lib\site-packages\pandas\io\common.py:728[0m, in [0;36mget_handle[1;34m(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)[0m
+[0;32m    725[0m     codecs[38;5;241m.[39mlookup_error(errors)
+[0;32m    727[0m [38;5;66;03m# open URLs[39;00m
+[1;32m--> 728[0m ioargs [38;5;241m=[39m _get_filepath_or_buffer(
+[0;32m    729[0m     path_or_buf,
+[0;32m    730[0m     encoding[38;5;241m=[39mencoding,
+[0;32m    731[0m     compression[38;5;241m=[39mcompression,
+[0;32m    732[0m     mode[38;5;241m=[39mmode,
+[0;32m    733[0m     storage_options[38;5;241m=[39mstorage_options,
+[0;32m    734[0m )
+[0;32m    736[0m handle [38;5;241m=[39m ioargs[38;5;241m.[39mfilepath_or_buffer
+[0;32m    737[0m handles: [38;5;28mlist[39m[BaseBuffer]
+
+File [1;32m~\anaconda3\Lib\site-packages\pandas\io\common.py:384[0m, in [0;36m_get_filepath_or_buffer[1;34m(filepath_or_buffer, encoding, compression, mode, storage_options)[0m
+[0;32m    382[0m [38;5;66;03m# assuming storage_options is to be interpreted as headers[39;00m
+[0;32m    383[0m req_info [38;5;241m=[39m urllib[38;5;241m.[39mrequest[38;5;241m.[39mRequest(filepath_or_buffer, headers[38;5;241m=[39mstorage_options)
+[1;32m--> 384[0m [38;5;28;01mwith[39;00m urlopen(req_info) [38;5;28;01mas[39;00m req:
+[0;32m    385[0m     content_encoding [38;5;241m=[39m req[38;5;241m.[39mheaders[38;5;241m.[39mget([38;5;124m"[39m[38;5;124mContent-Encoding[39m[38;5;124m"[39m, [38;5;28;01mNone[39;00m)
+[0;32m    386[0m     [38;5;28;01mif[39;00m content_encoding [38;5;241m==[39m [38;5;124m"[39m[38;5;124mgzip[39m[38;5;124m"[39m:
+[0;32m    387[0m         [38;5;66;03m# Override compression based on Content-Encoding header[39;00m
+
+File [1;32m~\anaconda3\Lib\site-packages\pandas\io\common.py:289[0m, in [0;36murlopen[1;34m(*args, **kwargs)[0m
+[0;32m    283[0m [38;5;250m[39m[38;5;124;03m"""[39;00m
+[0;32m    284[0m [38;5;124;03mLazy-import wrapper for stdlib urlopen, as that imports a big chunk of[39;00m
+[0;32m    285[0m [38;5;124;03mthe stdlib.[39;00m
+[0;32m    286[0m [38;5;124;03m"""[39;00m
+[0;32m    287[0m [38;5;28;01mimport[39;00m [38;5;21;01murllib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mrequest[39;00m
+[1;32m--> 289[0m [38;5;28;01mreturn[39;00m urllib[38;5;241m.[39mrequest[38;5;241m.[39murlopen([38;5;241m*[39margs, [38;5;241m*[39m[38;5;241m*[39mkwargs)
+
+File [1;32m~\anaconda3\Lib\urllib\request.py:215[0m, in [0;36murlopen[1;34m(url, data, timeout, cafile, capath, cadefault, context)[0m
+[0;32m    213[0m [38;5;28;01melse[39;00m:
+[0;32m    214[0m     opener [38;5;241m=[39m _opener
+[1;32m--> 215[0m [38;5;28;01mreturn[39;00m opener[38;5;241m.[39mopen(url, data, timeout)
+
+File [1;32m~\anaconda3\Lib\urllib\request.py:521[0m, in [0;36mOpenerDirector.open[1;34m(self, fullurl, data, timeout)[0m
+[0;32m    519[0m [38;5;28;01mfor[39;00m processor [38;5;129;01min[39;00m [38;5;28mself[39m[38;5;241m.[39mprocess_response[38;5;241m.[39mget(protocol, []):
+[0;32m    520[0m     meth [38;5;241m=[39m [38;5;28mgetattr[39m(processor, meth_name)
+[1;32m--> 521[0m     response [38;5;241m=[39m meth(req, response)
+[0;32m    523[0m [38;5;28;01mreturn[39;00m response
+
+File [1;32m~\anaconda3\Lib\urllib\request.py:630[0m, in [0;36mHTTPErrorProcessor.http_response[1;34m(self, request, response)[0m
+[0;32m    627[0m [38;5;66;03m# According to RFC 2616, "2xx" code indicates that the client's[39;00m
+[0;32m    628[0m [38;5;66;03m# request was successfully received, understood, and accepted.[39;00m
+[0;32m    629[0m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m ([38;5;241m200[39m [38;5;241m<[39m[38;5;241m=[39m code [38;5;241m<[39m [38;5;241m300[39m):
+[1;32m--> 630[0m     response [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39mparent[38;5;241m.[39merror(
+[0;32m    631[0m         [38;5;124m'[39m[38;5;124mhttp[39m[38;5;124m'[39m, request, response, code, msg, hdrs)
+[0;32m    633[0m [38;5;28;01mreturn[39;00m response
+
+File [1;32m~\anaconda3\Lib\urllib\request.py:559[0m, in [0;36mOpenerDirector.error[1;34m(self, proto, *args)[0m
+[0;32m    557[0m [38;5;28;01mif[39;00m http_err:
+[0;32m    558[0m     args [38;5;241m=[39m ([38;5;28mdict[39m, [38;5;124m'[39m[38;5;124mdefault[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mhttp_error_default[39m[38;5;124m'[39m) [38;5;241m+[39m orig_args
+[1;32m--> 559[0m     [38;5;28;01mreturn[39;00m [38;5;28mself[39m[38;5;241m.[39m_call_chain([38;5;241m*[39margs)
+
+File [1;32m~\anaconda3\Lib\urllib\request.py:492[0m, in [0;36mOpenerDirector._call_chain[1;34m(self, chain, kind, meth_name, *args)[0m
+[0;32m    490[0m [38;5;28;01mfor[39;00m handler [38;5;129;01min[39;00m handlers:
+[0;32m    491[0m     func [38;5;241m=[39m [38;5;28mgetattr[39m(handler, meth_name)
+[1;32m--> 492[0m     result [38;5;241m=[39m func([38;5;241m*[39margs)
+[0;32m    493[0m     [38;5;28;01mif[39;00m result [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+[0;32m    494[0m         [38;5;28;01mreturn[39;00m result
+
+File [1;32m~\anaconda3\Lib\urllib\request.py:639[0m, in [0;36mHTTPDefaultErrorHandler.http_error_default[1;34m(self, req, fp, code, msg, hdrs)[0m
+[0;32m    638[0m [38;5;28;01mdef[39;00m [38;5;21mhttp_error_default[39m([38;5;28mself[39m, req, fp, code, msg, hdrs):
+[1;32m--> 639[0m     [38;5;28;01mraise[39;00m HTTPError(req[38;5;241m.[39mfull_url, code, msg, hdrs, fp)
+
+[1;31mHTTPError[0m: HTTP Error 403: Forbidden
+
